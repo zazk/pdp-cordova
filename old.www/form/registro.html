@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../css/login.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../css/animate.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body>
+
+    <div class="preloader-wrapper active" style="margin:30px;display:none;" id="content-loader">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+        <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+        </div><div class="circle-clipper right">
+        <div class="circle"></div>
+        </div>
+      </div>
+      </div>
+
+    <div class="back-loader" style="display:none;">
+    <div>
+      <div class="preloader-wrapper big active loader" style="display:none;">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+        <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+        </div><div class="circle-clipper right">
+        <div class="circle"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+  <div class="center">
+    <img src="../images/logo_top.jpg" alt="" class="responsive-image bounceIn animated" />
+  </div>
+
+  <div class="container-spacing">
+
+    <div class="row without-bottom with-top">
+
+      <h5 class="bottom-2">REGISTRO DE USUARIO	</h5>
+
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="dni" type="text" class="validate">
+        <label for="dni">Nro. Documento</label>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="nombres" type="text" class="validate">
+        <label for="nombres">Nombre completo</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="email" type="text" class="validate">
+        <label for="email">Correo electrónico</label>
+      </div>
+    </div>
+
+    <div class="row without-bottom">
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate">
+        <label for="password">Contraseña</label>
+      </div>
+    </div>
+
+    <div class="row without-bottom">
+      <div class="input-field col s12">
+        <input id="repassword" type="password" class="validate">
+        <label for="repassword">Repetir Contraseña</label>
+      </div>
+    </div>
+
+    <div class="row without-bottom">
+      <div class="input-field col s12">
+        <input id="telefono" type="text" class="validate">
+        <label for="telefono">Teléfono</label>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row without-bottom">
+      <div class="input-field col s12">
+        <select id="distrito" class="validate"></select>
+        <label for="distrito" style="font-size: 4.2vw !important;color: #F9BE0C !important;">Distrito</label>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col s9">
+             <div style="font-size: 4.2vw !important;color: #F9BE0C !important;" id="leerTerminos">Aceptar terminos y condiciones</div>
+      </div>
+
+      <div class="col s3">
+        <div class="switch">
+          <label>
+            <input type="checkbox" checked="checked" id="chkRecibirAlertas">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+<br>
+    <div class="row">
+
+      <div class="input-field col s6 without-top with-bottom">
+        <a class="waves-effect waves-light btn total-width"  id="registrar">REGISTRAR</a>
+      </div>
+
+      <div class="input-field col s6 without-top with-bottom">
+        <a class="waves-effect waves-light btn total-width"  id="cancelar" onclick="UtilFn.redirect('../index')">CANCELAR</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalTerminos" class="modal modal-fixed-footer">
+    <div class="modal-content terminos-condiciones">
+      <h5 class="title center">Términos y Condiciones generales del Portal</h5>
+      <p>
+        1. TÉRMINOS Y CONDICIONES GENERALES Y SU ACEPTACIÓN.
+Los presentes Términos y Condiciones Generales (en adelante “Términos y Condiciones Generales”) regulan el uso y los servicios prestados mediante (i) El portal de Internet denominado patadeperroapp.com, en adelante el “Portal”, (ii) Aplicación ANDROID llamada Pata de Perro disponible en Google Play, en adelante “aplicación Android” y (iii) Aplicación IOS llamada Pata de Perro disponible en Apple Store, en adelante “aplicación IOS”; que “Soluciones Aplicativas Pata de Perro JLV SAC.” (en adelante, “LA EMPRESA”) pone a disposición de sus Usuarios de Internet;
+La utilización del Portal, aplicación Android y/o aplicación IOS atribuye al visitante, la condición de Usuario del Portal, aplicación Android y/o aplicación IOS (en adelante, el “Usuario”) e implica su aceptación plena y sin reservas de todas y cada una de las disposiciones incluidas en estos “Términos y Condiciones Generales” en la versión publicada por LA EMPRESA en el momento mismo en que el Usuario acceda al Portal, aplicación Android y/o aplicación IOS. En consecuencia, el Usuario debe leer atentamente los presentes “Términos y Condiciones Generales” en cada una de las ocasiones en que se proponga utilizar el Portal, aplicación Android y/o aplicación IOS ya que aquéllos pueden sufrir modificaciones.
+La utilización de ciertos servicios ofrecidos a los Usuarios a través del Portal, aplicación Android y/o aplicación IOS se encuentran  sometidos a condiciones particulares (en adelante, las “Condiciones Particulares”) que, según los casos, sustituyen, completan y/o modifican los presentes “Términos y Condiciones Generales”. Por lo tanto, con anterioridad a la utilización de dichos servicios, el Usuario también ha de leer atentamente las correspondientes Condiciones Particulares.
+Asimismo, la utilización del Portal, aplicación Android y/o aplicación IOS se encuentra sometida igualmente a todos los avisos, reglamentos de uso e instrucciones puestos en conocimiento del Usuario por LA EMPRESA, que sustituyen, completan y/o modifican los presentes “Términos y Condiciones Generales”.
+CUALQUIER PERSONA QUE NO ACEPTE ESTOS TÉRMINOS Y CONDICIONES GENERALES, LOS CUALES TIENEN UN CARÁCTER OBLIGATORIO Y VINCULANTE, DEBERÁ ABSTENERSE DE UTILIZAR EL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS Y/O LOS SERVICIOS OFRECIDOS.
+    </p>
+<p>
+2. OBJETO.
+A través del Portal, aplicación Android y/o aplicación IOS LA EMPRESA registra a los usuarios, y les proporciona una plataforma donde puede ver información de otros usuarios y contactar a usuarios y negocios que presten algún servicio  (en adelante, los “Servicios”).
+    </p>
+<p>
+3. CONDICIONES DE ACCESO Y UTILIZACIÓN DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS.<br>
+3.1.  Carácter gratuito del acceso y utilización del Portal, aplicación Android y/o aplicación IOS.
+El acceso al Portal, aplicación Android y/o aplicación IOS por parte de los Usuarios tiene carácter gratuito. No obstante lo anterior, algunos de los Servicios suministrados por LA EMPRESA están sujetos al pago de un precio en la forma que se determine en las correspondientes Condiciones Particulares.
+<br>3.2.  Registro de Usuario.
+El acceso al Portal, aplicación Android y/o aplicación IOS requiere una previa inscripción o registro a tal fin. No obstante, LA EMPRESA condiciona la utilización de los Servicios al previo llenado y posterior envío del correspondiente registro de Usuario, el mismo que se encuentra disponible para aquellos Usuarios que deseen registrarse. Hay 3 modalidades de registro para ingresar a la aplicación Android y/o aplicación IOS: llenado de formulario de registro, registro usando una cuenta personal de Facebook. Quienes deseen figurar en la sección de servicios, adicionalmente llenaran un formulario de registro de negocio.
+El Usuario acepta, por el hecho de registrarse como tal en el Portal, aplicación Android y/o aplicación IOS el derecho de LA EMPRESA de comunicarse con él por todas las vías y medios posibles, incluidos los electrónicos, hasta tanto soliciten la cancelación de su cuenta en el Portal, aplicación Android y/o aplicación IOS o hasta donde la legislación aplicable sobre la materia lo permita.
+<br>3.3.  Veracidad de la información.
+Toda la información que facilite el Usuario a LA EMPRESA deberá ser veraz. A estos efectos, el Usuario garantiza la autenticidad de todos aquellos datos que comunique como consecuencia del llenado y posterior envío a LA EMPRESA de los formularios necesarios para su suscripción. De igual forma, el Usuario será responsable de mantener toda la información facilitada a LA EMPRESA permanentemente actualizada de forma que pueda ser contactado de ser necesario por LA EMPRESA u otros usuarios. En todo caso el Usuario será el único responsable de las manifestaciones falsas o inexactas que realice y de los perjuicios que cause a LA EMPRESA, a otros Usuarios y/o a terceros.
+De otro lado, el Portal, aplicación Android y/o aplicación IOS son una comunidad en constante evolución que incluye diversos Usuarios con diferentes experiencias y antecedentes. A pesar que LA EMPRESA puede monitorear y tomar acción sobre la conducta inapropiada de otros Usuarios o terceros, en el Portal, aplicación Android y/o aplicación IOS o el acceso o utilización de cualquiera de los Servicios ofrecidos, incluidas redes sociales; es posible que en cualquier momento pueda presentarse una actitud, lenguaje u otros materiales accesibles en o a través de tales que puedan ser inapropiados, intolerables u ofensivos para otros Usuarios. Los presentes Términos y Condiciones Generales señalan normas de conducta para todos los Usuarios, pero LA EMPRESA no puede garantizar que todos los Usuarios cumplan con los mismos.
+<br>3.4.  Obligación de hacer un uso correcto del Portal, aplicación Android y/o aplicación IOS y de los Servicios.
+El Usuario se compromete a utilizar el Portal, aplicación Android y/o aplicación IOS y los Servicios ofrecidos, de conformidad con la Ley aplicable, los presentes “Términos y Condiciones Generales”, las “Condiciones Particulares” y demás avisos, reglamentos de uso e instrucciones puestos en su conocimiento, así como de acuerdo con el orden público, la moral y las buenas costumbres.
+A tal efecto, el Usuario:
+<br>a) No deberá modificar, adaptar, traducir o crear obras derivadas o basados en cualquier parte o contenidos del Portal, aplicación Android y/o aplicación IOS o de los Servicios ofrecidos.
+<br>b) No deberá hacerse pasar por algún empleado de LA EMPRESA o socio comercial de éste o sus respectivos empleados.
+<br>c) No deberá usar ningún lenguaje ilícito, amenazante, abusivo, obsceno, pernicioso, difamatorio, vulgar, acosador, aborrecible, racista, desde un punto de vista étnico u censurable contra otro Usuario o terceros, ni cualquier lenguaje que se considere inapropiado o en contra de la moral y las buenas costumbres.
+<br>d) No deberá amenazar, acosar, ni causar angustia a otro Usuario o terceros o fomentar una atención no deseada de otros Usuarios, tal como lo interpreta o determina LA EMPRESA a su exclusivo y absoluto criterio.
+<br>e) No deberá organizar o participar en ninguna asociación o grupo de Usuarios que se base en o propugne una filosofía racista, sexista, antirreligiosa, anti-étnica u alguna otra que fomente el rencor, odio o discriminación.
+<br>f) No deberá usar un lenguaje sexualmente explícito el cual sea gráfico, inapropiado o represente actos sexuales incluyendo pero sin limitarse al lenguaje sexual de naturaleza violenta o amenazante dirigida a otra persona,  grupo de personas o Usuarios; o de lo contrario que sea considerado como inapropiado por parte del personal de soporte de LA EMPRESA.
+<br>g) No deberá publicar, ya sea comentarios, videos, fotos y otros que contengan alusiones a contenidos pornográficos y menos aún a pornografía infantil. En éste último caso, LA EMPRESA  reportará tales hechos a las autoridades competentes. Asimismo no deberá permitir la incitación a la práctica de un acto obsceno.
+<br>h) Se podrá comercializar, promocionar, hacer publicidad o solicitar  a través del Portal, aplicación Android y/o aplicación IOS previo pago convenido con LA EMPRESA,  a menos que ésta disponga lo contrario. Las publicaciones de perritos perdidos y encontrados a través del portal, aplicación Android y/o aplicación son gratuitos y lo serán siempre.
+<br>i) No deberá de una forma u otra alentar, incitar o dirigir a otros Usuarios a infringir los Términos y Condiciones Generales, las Condiciones Particulares, normas de Conducta o cualquier ley aplicable del mundo real.
+<br>j) No deberá infringir ninguna ley aplicable.
+<br>k) No deberá usar el Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos para algún propósito ilícito o ilegal. En particular: i) Los usuarios no podrán ofrecer sus servicios de búsqueda de perritos perdidos a cambio de contraprestaciones económicas, favores, retribuciónes o ventajas de cualquier tipo o especie. La colaboración debe ser desinteresada o en el máximo de los casos motivada por alguna recompensa  que el usuario crea conveniente. ii) Los usuarios pueden convenir en algún intercambio monetario, favores, etc. Derivado de la ayuda recibida en la búsqueda de sus perritos o la devolución del mismo, en caso fue encontrado y/o retenido por algún usuario hasta encontrar a la familia del perrito. En cuyo caso LA EMPRESA no se responsabiliza por el cumplimiento del acuerdo pactado entre los usuarios
+<br>l) No deberá anunciar o proporcionar enlaces a ningún sitio o contenido que contenga material sexual, material o contenidos para adultos o que sea ilegal, así como a contenido que pueda dañar o deteriorar la red o computadora de un Usuario, y/o contenido que infrinja los presente Términos y Condiciones Generales.
+<br>m) No deberá sacar ventaja indebida de ningún problema, función, o diseño del Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos. No deberá informar directa o indirectamente la existencia de dicho problema a otro Usuario.
+<br>n) No deberá exigir u obligar a ningún otro Usuario o tercero el que le comunique o informe de cualquier dato personal del mundo real que no haya sido publicado libre y espontáneamente por el Usuario en cuestión o que éste no desee revelar o compartir.
+<br>o) No deberá brindar información falsa u ocultar intencionalmente alguna información a LA EMPRESA, los otros Usuarios o terceros que puedan perjudicarlos de cualquier forma.
+<br>p) No deberá utilizar, crear o brindar alguna emulación del servidor de LA EMPRESA, el Portal, aplicación Android y/o aplicación IOS o cualquiera de los Servicios ofrecidos. No deberá comunicar, solicitar, utilizar o distribuir ninguna utilidad, emulador, aplicación u otros programas o software relacionados a LA EMPRESA que no cuenten con el permiso por escrito expreso de LA EMPRESA o el titular de los derechos de propiedad intelectual correspondiente.
+<br>q) No deberá intentar interferir, piratear o descifrar alguna transmisión de los servidores de LA EMPRESA.
+<br>r) No deberá infringir los derechos de propiedad industrial o intelectual de LA EMPRESA o de terceros titulares. El Usuario no deberá cargar, trasmitir o de lo contrario comunicar material protegidos por derechos de autor salvo que el Usuario tenga autorización para tales acciones por parte de los respectivos titulares de derecho de propiedad industrial o intelectual.
+<br>s) No deberá interferir con la capacidad de otros Usuarios para acceder usar o disfrutar del Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos.
+<br>t) No deberá intentar reproducir o copiar ningún producto, información, contenidos o Servicio ofrecido por LA EMPRESA.
+El incumplimiento, por parte del Usuario de cualquiera de las condiciones precedentes, u otras contenidas en los presentes Términos y Condiciones Generales, implicará de inmediato su impedimento de acceso al Portal, aplicación Android y/o aplicación IOS, la suspensión o baja de su cuenta en el Portal, aplicación Android y/o aplicación IOS en caso sea un Usuario registrado, y la denuncia correspondiente ante las autoridades pertinentes, de corresponder.
+En caso un Usuario tenga conocimiento de que otro Usuario o tercero realiza cualquier acto prohibido por los presentes Términos y Condiciones Generales, o que resulta inmoral, ilícito o ilegal; deberá comunicar tal hecho a LA EMPRESA.
+LA EMPRESA recomienda actuar con prudencia y sentido común al momento de contactarse y/o comunicarse con otros Usuarios y/o terceros por medio del Portal, aplicación Android y/o aplicación IOS. El Usuario debe tener presente, además, los riesgos de comunicarse, por medio del Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos, con personas que se valgan de una identidad falsa. LA EMPRESA,  no será responsable por los daños o perjuicios de cualquier naturaleza que un Usuario pueda sufrir a causa de la confianza depositada en otro Usuario y/o tercero.
+En caso que uno o más Usuarios, Usuarios Registrados o algún tercero inicien cualquier tipo de reclamo o acciones legales contra otro u otros Usuarios, Usuarios Registrados, terceros y/o usuarios que se publiciten o aparezcan en nuestra sección clasificados; todos y cada uno de los involucrados en dichos reclamos o acciones eximen expresamente de toda responsabilidad a LA EMPRESA y a sus directores, gerentes, empleados, agentes, operarios, representantes, asesores, apoderados, accionistas y empresas asociadas, contratantes, subsidiarias o sucursales.
+<br>3.6. Obligación de hacer uso correcto de los Espacios de Publicación Abiertos.
+El Usuario se obliga a hacer un uso conforme a la ley, a los presentes Términos y Condiciones Generales, a la ley, la moral y las buenas costumbres generalmente aceptadas y al orden público de aquellos servicios que, por su naturaleza, permiten a los Usuarios introducir contenidos en el Portal, aplicación Android y/o aplicación IOS y hacerlos accesibles a otros Usuarios y terceros, como por ejemplo las publicaciones de perritos perdidos y encontrados, tablones de anuncios de la sección de clasificados, etc. (en adelante “Espacios de Publicación Abiertos”).
+A título meramente enunciativo, el Usuario se compromete a no transmitir, difundir o poner a disposición de otros Usuarios o terceros, a través de los Espacios de Publicación Abiertos, contenidos que (a) de cualquier forma contravengan, menosprecien o atenten contra los derechos de las personas o contra el ordenamiento jurídico vigente; (b) induzcan, inciten o promuevan actos ilegales, delictivos, denigratorios, difamatorios, violentos o, en general, contrarios a la ley, a la moral y buenas costumbres o al orden público; (c) induzcan, inciten o promuevan actuaciones, actitudes o ideas discriminatorias por razón de sexo, raza, religión, creencias, edad o condición; (d) incorporen, pongan a disposición o permitan acceder a productos, elementos, mensajes y/o servicios delictivos, violentos, pornográficos, degradantes o, en general, contrarios a la ley, a la moral y buenas costumbres o al orden público; (e) induzcan o puedan inducir a un estado inaceptable de ansiedad o temor de otros Usuario o tercero; (f) induzcan o inciten a involucrarse en prácticas peligrosas o ilegales, de riesgo o nocivas para la salud y el equilibrio psicológico de cualquier Usuario; (g) sean falsos, ambiguos, inexactos o exagerados, de forma que puedan inducir a error sobre su objeto o sobre las intenciones o propósitos del comunicante; (h) se encuentren protegidos por derechos personales (imagen y/o voz) o de propiedad intelectual o industrial pertenecientes a terceros, sin que el Usuario haya obtenido previamente de sus titulares la autorización para su uso; (i) violen los secretos empresariales de terceros; (j) sean contrarios al derecho al honor, a la intimidad personal y familiar o a la propia imagen de las personas; (k)  constituyan publicidad ilícita, engañosa o desleal y, en general, que constituyan competencia desleal; (l) incorporen virus u otros elementos que puedan dañar o impedir el normal funcionamiento de la red, del sistema o de equipos informáticos (hardware y software) de terceros; (m) publiciten, promocionen u ofrezcan cualquier tipo de producto o servicio no autorizado previamente por LA EMPRESA; y (n) sean falsos o no correspondan con la real y actual situación del Usuario en cuestión.
+LA EMPRESA no tiene obligación de controlar y no controla los contenidos transmitidos, difundidos o puestos a disposición de terceros por los Usuarios a través de los Espacios de Publicación Abiertos. Sin perjuicio de lo anterior, LA EMPRESA se reserva el derecho a revisar, en cualquier momento y sin previo aviso, por iniciativa propia o a petición de tercero, los contenidos transmitidos, difundidos o puestos a disposición a través de los Espacios de Publicación Abiertos y a impedir su transmisión, difusión o puesta a disposición, y en todo caso a eliminarlos, si es que tales contenidos, a su juicio, resultan contrarios a lo dispuesto en estos Términos y Condiciones Generales.
+El incumplimiento por parte del Usuario de cualquiera de las condiciones precedentes, u otras contenidas en los presentes Términos y Condiciones Generales implicará de inmediato la baja de su cuenta y los Servicios ofrecidos y la denuncia correspondiente, de ser el caso, ante las autoridades pertinentes.
+El Usuario que transmita, difunda o coloque cualquier contenido de su autoría o propiedad en los Espacios de Publicación Abiertos, por la aceptación de los presente Términos y Condiciones Generales, otorga una licencia gratuita, no exclusiva, por el máximo del tiempo legalmente permitido y a nivel mundial a LA EMPRESA, para que ésta pueda reproducir, distribuir y comunicar públicamente dichos contenidos en el Portal, aplicación Android y/o aplicación IOS y otras redes de comunicación electrónicas propias o de terceros; así como para modificarlos, realizar obras derivadas a partir de tales contenidos, compartirlos, transmitirlos, retransmitirlos, alquilarlos y/o enviarlos o hacerlos accesibles, total o parcialmente, a otros Usuarios o terceros y explotarlos de la manera más amplia posible; sin que ello signifique el reconocimiento de pago de contraprestación alguna o la generación del derecho de percibir regalías de ningún tipo a favor del Usuario en cuestión.
+<br>3.7 Acciones disciplinaria y baja del usuario.
+LA EMPRESA tiene la capacidad de emitir advertencias, suspensiones temporales y cancelaciones permanentes (baja) de los Usuarios registrados por infracciones a los presentes Términos y Condiciones Generales, así como a las Condiciones Particulares y/o cualquier aviso, reglamento de uso e instrucción puestos en conocimiento del Usuario por LA EMPRESA. En ese sentido, LA EMPRESA se reserva el criterio con respecto a cuándo y cómo imponer advertencias, sanciones y/o acciones disciplinarias. La severidad de un incumplimiento y número de ocurrencias se toman en cuenta en las decisiones, pero éstas no son las únicas medidas utilizadas.
+<br>3.8 Contenido de terceros
+<br>El Usuario manifiesta que conoce y está enterado de que cierta información, textos, imágenes, u otros contenidos, son de titularidad exclusiva del Usuario que las sube, transmite o hace accesible en o a través del Portal, aplicación Android y/o aplicación IOS o los Servicios disponibles; así como de la exclusiva responsabilidad de la persona que originó tal contenido y no de LA EMPRESA, excepto cuando expresamente se señale lo contrario. Por lo anterior, LA EMPRESA no es ni será responsable del contenido que publiquen y/o difundan los propios Usuarios o terceros, en o a través del Portal, aplicación Android y/o aplicación IOS ni representa de modo alguno la opinión de LA EMPRESA. El Usuario que genere tal contenido, o que lo haya publicado, enviado o que de cualquier otra manera, transmitido en o a través del Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos será el único responsable del mismo.
+En virtud de que LA EMPRESA no controla el contenido que es transmitido, almacenado o publicado en o a través del Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos por los propios Usuarios; no garantiza la exactitud, veracidad, idoneidad, actualidad, integridad, utilidad, legalidad, seguridad, pertinencia  o calidad de los mismos. El Usuario, al utilizar el Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos, puede estar expuesto a contenido que sean ofensivos, indecentes o inaceptables para él mismo o ilegales bajo las leyes aplicables en el país de residencia del Usuario o en el país en el que se ubique el Usuario al acceder al Portal, aplicación Android y/o aplicación IOS o los Servicios ofrecidos; por lo que LA EMPRESA, bajo ninguna circunstancia, será responsable ante el Usuario o ante terceras personas por tal contenido.
+    </p>
+    <p>
+ 4. NO LICENCIA DE USO DE PROPIEDAD INTELECTUAL.
+Todas las marcas, nombres comerciales o signos distintivos de cualquier clase que aparecen en el Portal, aplicación Android y/o aplicación IOS son propiedad de LA EMPRESA o de sus respectivos titulares, sin que pueda entenderse que el uso o acceso al Portal, aplicación Android y/o aplicación IOS y/o a los Servicios atribuya al Usuario derecho alguno sobre las citadas marcas, nombres comerciales y/o signos distintivos. En todos los casos el uso de marcas, nombres comerciales o signos distintivos de terceros en el Portal, aplicación Android y/o aplicación IOS son únicamente con fines informativos para los Usuarios y los consumidores en general.
+Asimismo los contenidos, imágenes, reseñas, textos y otros Derecho de Propiedad Intelectual que aparecen en el Portal, aplicación Android y/o aplicación IOS son de titularidad de LA EMPRESA o de sus respectivos titulares y/o autores, sin que puedan entenderse cedidos en su derecho de uso, reproducción, distribución, comercialización, modificación o explotación comercial en cualquier forma, al Usuario o visitante del portal, aplicación Android y/o aplicación IOS. En virtud de lo establecido en los presentes “Términos y Condiciones Generales”, ninguno de los derechos existentes o que puedan existir en el futuro sobre dichos contenidos, imágenes, reseñas, textos y otros Derecho de Propiedad Intelectual, podrá ser utilizado por el Usuario más allá de lo estrictamente necesario para el correcto uso del Portal, aplicación Android y/o aplicación IOS y de los Servicios ofrecidos, y siempre bajo los principios de buena fe y uso honesto de los mismos.
+LA EMPRESA EXCLUYE, CON TODA LA EXTENSIÓN PERMITIDA POR EL ORDENAMIENTO JURÍDICO, CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LA VIOLACIÓN DE SIGNOS DISTINTIVOS O DERECHOS DE PROPIEDAD INTELECTUAL POR PARTE DE LOS USUARIOS, USUARIOS OFERENTESY/O TERCEROS.
+El Usuario no puede descargar, copiar, reproducir, volver a publicar, enviar por correo ordinario, transmitir, almacenar, vender o distribuir las obras y otros derechos de propiedad intelectual sin el permiso escrito previo de LA EMPRESA o del titular del contenido correspondiente, salvo que se trate de descargar una copia en cualquier ordenador únicamente para uso personal, doméstico y no comercial, siempre que se mantengan intactas las advertencias sobre derechos de propiedad intelectual y cualquier otra advertencia de propiedad. Está prohibido modificar el contenido o usar parte del Contenido o la información proporcionada para otro propósito que no sea el establecido en los presentes Términos y Condiciones Generales.
+</p>
+<p>
+5. DE LOS SERVICIOS OFRECIDOS.
+LA EMPRESA no tiene ninguna relación contractual y/o comercial con los Usuarios que se registren en el Portal, aplicación Android y/o aplicación IOS y publican en busco y encontré, más allá de los términos de los presentes “Términos y Condiciones Generales”. En tal sentido, cada Usuario se registra en el Portal, aplicación Android y/o aplicación IOS utiliza los Servicios, publica y/o interactúa con otros Usuarios, lo hace bajo su libre y exclusiva voluntad y criterio personal. En tal sentido, LA EMPRESA no garantiza en forma alguna que la información publicada en el portal, aplicación Android y/o aplicación IOS de sus Usuarios sea real, verdadera, completa, legal o exacta; ni otorga garantía sobre el Portal, aplicación Android y/o aplicación IOS y/o los Servicios disponibles para ninguna actividad o fin en concreto. Para los usuarios que publiquen en servicios,  si existe una relación contractual y/o comercial, pero LA EMPRESA no se responsabiliza por la veracidad del contenido promocional, publicitario o informativo.
+La comunicación, contacto y/o relación entre Usuarios a través del Portal, aplicación Android y/o aplicación IOS y/o los Servicios disponibles se realizan fuera de la esfera de participación, actividad, conocimiento, monitoreo  y/o control de LA EMPRESA, pues ésta sólo ofrece la plataforma tecnológica que hace posible ello sin ningún tipo de intervención adicional, tal y como sucedería en la vida real con una sección de anuncios clasificados para buscar perritos perdidos o dar a conocer uno que se encontró. Tales comunicaciones, contactos y/o relaciones se realizan directamente entre los Usuarios del Portal, aplicación Android y/o aplicación IOS.
+</p>
+<p>
+6. EXCLUSIÓN DE GARANTÍAS Y DE RESPONSABILIDAD.
+<br>6.1.  Exclusión de garantías y de responsabilidad por el funcionamiento del Portal, aplicación Android y/o aplicación IOS y de los Servicios.
+LA EMPRESA no garantiza la disponibilidad y continuidad del funcionamiento del Portal, aplicación Android y/o aplicación IOS y de los Servicios. LA EMPRESA tampoco garantiza la utilidad del Portal, aplicación Android y/o aplicación IOS y de los Servicios para la realización de ninguna actividad en concreto, ni la infalibilidad del Portal, aplicación Android y/o aplicación IOS y/o los Servicios disponibles y, en particular, aunque no de modo exclusivo, que los Usuarios puedan efectivamente utilizar el Portal, aplicación Android y/o aplicación IOS y sus contenidos.
+LA EMPRESA EXCLUYE, CON TODA LA EXTENSIÓN PERMITIDA POR EL ORDENAMIENTO JURÍDICO, CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LA FALTA DE DISPONIBILIDAD O DE CONTINUIDAD DEL FUNCIONAMIENTO DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS Y DE LOS SERVICIOS, A LA DEFRAUDACIÓN DE LA UTILIDAD QUE LOS USUARIOS HUBIEREN PODIDO ATRIBUIR AL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS, A LA INFORMACIÓN O A LOS SERVICIOS OFRECIDOS, A LA FIABILIDAD DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS, LA INFORMACIÓN O LOS SERVICIOS OFRECIDOS, Y EN PARTICULAR, AUNQUE NO DE MODO EXCLUSIVO, A LOS FALLOS EN EL ACCESO A LAS DISTINTAS PÁGINAS WEB DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS O A AQUELLAS DESDE LAS QUE SE PRESTAN LOS SERVICIOS.
+LA EMPRESA no garantiza la privacidad y seguridad de la utilización del Portal, aplicación Android y/o aplicación IOS y de los Servicios ofrecidos y, en particular, no garantiza que terceros no autorizados no puedan tener conocimiento de la clase, condiciones, características y circunstancias del uso que los Usuarios hacen del Portal, aplicación Android y/o aplicación IOS y de los Servicios.
+LA EMPRESA EXCLUYE, CON TODA LA EXTENSIÓN PERMITIDA POR EL ORDENAMIENTO JURÍDICO, CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUDIERAN DEBERSE AL CONOCIMIENTO QUE PUEDAN TENER TERCEROS NO AUTORIZADOS DE LA CLASE, CONDICIONES, CARACTERÍSTICAS Y CIRCUNSTANCIAS DEL USO QUE LOS USUARIOS HACEN DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS Y DE LOS SERVICIOS.
+<br>6.2.  Exclusión de garantías y de responsabilidad por los Contenidos.
+<br>6.2.1.  Calidad.
+LA EMPRESA no controla, monitorea, ni garantiza la ausencia de virus ni de otros elementos maliciosos en los Contenidos que puedan producir alteraciones en su sistema informático (software y hardware) o en los documentos electrónicos y ficheros almacenados en su sistema informático.
+LA EMPRESA EXCLUYE, CON TODA LA EXTENSIÓN PERMITIDA POR EL ORDENAMIENTO JURÍDICO, CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LA PRESENCIA DE VIRUS O A LA PRESENCIA DE OTROS ELEMENTOS MALICIOSOS EN LOS CONTENIDOS QUE PUEDAN PRODUCIR ALTERACIONES EN EL SISTEMA INFORMÁTICO, DOCUMENTOS ELECTRONICOS O FICHEROS DE LOS USUARIOS.
+<br>6.2.2.  Licitud, fiabilidad y utilidad.
+LA EMPRESA no garantiza la licitud, fiabilidad, utilidad, veracidad, exactitud, legalidad, exhaustividad y/o actualidad de los Contenidos proporcionados por otros Usuarios o terceros.
+LA EMPRESA EXCLUYE, CON TODA LA EXTENSIÓN PERMITIDA POR EL ORDENAMIENTO JURÍDICO, CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LA TRANSMISIÓN, DIFUSIÓN, ALMACENAMIENTO, PUESTA A DISPOSICIÓN, RECEPCIÓN, OBTENCIÓN, ACCESO Y/O UTILIZACIÓN A LOS CONTENIDOS PRODUCIDOS O PROPORCIONADOS POR OTROS USUARIOS O TERCEROS.
+<br>6.3.  Exclusión de garantías y de responsabilidad por los servicios prestados por terceros a través del Portal, aplicación Android y/o aplicación IOS.
+<br>6.3.1.  Calidad.
+LA EMPRESA no controla, monitorea ni garantiza la ausencia de virus ni de otros elementos en los servicios prestados por terceros a través del Portal, aplicación Android y/o aplicación IOS que puedan producir alteraciones en su sistema informático (software y hardware) o en los documentos electrónicos y ficheros almacenados en su sistema informático.
+LA EMPRESA EXCLUYE CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LA PRESENCIA DE VIRUS O A LA PRESENCIA DE OTROS ELEMENTOS MALICIOSOS EN LOS SERVICIOS PRESTADOS POR TERCEROS A TRAVÉS DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS QUE PUEDAN PRODUCIR ALTERACIONES EN EL SISTEMA INFORMÁTICO, DOCUMENTOS ELECTRONICOS O FICHEROS DE LOS USUARIOS O TERCEROS.
+<br>6.3.2.  Licitud, actualidad, fiabilidad y utilidad.
+LA EMPRESA no garantiza la licitud, actualidad, fiabilidad y/o utilidad de los Servicios, aplicaciones y/o información de cualquier naturaleza prestada o proporcionada por otros Usuarios o terceros a través del Portal, aplicación Android y/o aplicación IOS; en especial pero sin limitarse a perfiles de Usuarios, anuncios publicitarios de productos y/o servicios, entre otros.
+LA EMPRESA EXCLUYE CUALQUIER RESPONSABILIDAD POR LOS DAÑOS Y PERJUICIOS DE TODA NATURALEZA QUE PUEDAN DEBERSE A LOS SERVICIOS, APLICACIONES Y/O INFORMACIÓN DE CUALQUIER NATURALEZA PRESTADA O PROPORCIONADA POR OTROS USUARIOS O TERCEROS A TRAVÉS DEL PORTAL, APLICACIÓN ANDROID Y/O APLICACIÓN IOS; EN ESPECIAL PERO SIN LIMITARSE A PERFILES DE USUARIOS, ANUNCIOS PUBLICITARIOS DE PRODUCTOS Y/O SERVICIOS, APLICACIONE, ENTRE OTROS.
+<br>6.4.        Exclusión de garantías y de responsabilidad por la información, contenidos y servicios  alojados fuera del Portal, aplicación Android y/o aplicación IOS.
+El Portal, aplicación Android y/o aplicación IOS puede poner a disposición de los Usuarios dispositivos técnicos de enlace (tales como, entre otros, links, banners, botones), directorios y herramientas de búsqueda propios y/o gestionados por terceros (en adelante, “Sitios Enlazados”). La instalación de estos enlaces, directorios y herramientas de búsqueda en el Portal, aplicación Android y/o aplicación IOS tiene por único objeto facilitar a los Usuarios la búsqueda y acceso a la información, contenidos y servicios disponibles en el Portal, aplicación Android y/o aplicación IOS y/o Internet.
+En el caso de los resultados de herramientas de búsqueda que son proporcionados directamente por terceros, LA EMPRESA no puede controlar y no controla tales resultados y, en particular, que entre ellos aparezcan sitios de Internet cuyos contenidos puedan resultar ilícitos, contrarios a la moral o a las buenas costumbres o considerados inapropiados por otros motivos. En el supuesto de que un Usuario considere que en alguno de los sitios incluidos en los resultados de la búsqueda o enlaces de terceros se presenta alguna actividad o información ilícita y esté interesado en solicitar la supresión del enlace, puede poner en marcha el procedimiento previsto en los presentes “Términos y Condiciones Generales”.
+LA EMPRESA no ofrece ni comercializa por sí ni por medio de terceros la información, contenidos y servicios disponibles en los Sitios Enlazados, salvo que se indique lo contrario, ni los controla previamente, aprueba, recomienda, vigila ni hace propios. El Usuario, por tanto, debe extremar la prudencia en la valoración y utilización de la información, contenidos y servicios existentes en los Sitios Enlazados.
+<br>6.5. Alcance de la Información y Servicios ofrecidos.
+LA EMPRESA se limita tan sólo a ser una plataforma para que los Usuarios que así lo desean, puedan publicar la pérdida de su perrito y los datos de alguno encontrado, y en la forma en que tales datos han sido proporcionados por los mismos Usuarios.
+En ese sentido, el Usuario reconoce y acepta que LA EMPRESA no es parte en ningún contacto, comunicación, intercambio de información, promesas, negociaciones, ofertas y/u operaciones que pueda tener con otros Usuarios y terceros, ni podrá verificar la identidad o datos personales ingresados por los Usuarios. LA EMPRESA no garantiza la veracidad, fiabilidad, oportunidad, exactitud de los datos publicados en el Portal, aplicación Android y/o aplicación IOS por los Usuarios; y no será responsable por los mismos, ni por la correspondencia, comunicación, contacto o relación que el Usuario realice con otros Usuarios o terceros. LA EMPRESA no tiene obligación alguna de conservar información que haya hecho disponible a los Usuarios, ni que le haya sido enviada por éstos últimos, por lo que no asume ninguna responsabilidad por ella, su modificación o eliminación en el Portal, aplicación Android y/o aplicación IOS.
+<br>6.6. Formularios de Contacto
+El Portal, aplicación Android y/o aplicación IOS contienen herramientas de envío de información, como por ejemplo formularios de contacto. Tales herramientas no pueden ser consideradas, ahora o en el futuro, como cuentas de correo electrónico, herramientas de comunicación personal u otras similares.
+LA EMPRESA podrá monitorear las herramientas de envío de información dispuestos en el Portal, aplicación Android y/o aplicación IOS, con la finalidad de verificar cuestiones relaciones con la seguridad de la información, realizar estadísticas y comprobar la funcionalidad y buen funcionamiento de las mismas; por lo que el Usuario entiende y acepta que tal envío/recepción de información y/o acceso a la misma no podrá ser negada a LA EMPRESA sobre la base de violación al secreto de las comunicaciones o derecho de privacidad o intimidad.
+    </p>
+    <p>
+7. PROTECCIÓN DE DATOS PERSONALES.
+Para utilizar los Servicios ofrecidos por LA EMPRESA, los Usuarios deberán facilitar determinados datos de carácter personal.
+De conformidad con la Ley N°  29733, Ley de Protección de Datos Personales, desde el momento de su ingreso y/o utilización al Portal, aplicación Android y/o aplicación IOS, el Usuario da un consentimiento expreso a LA EMPRESA para el tratamiento de sus datos personales facilitados o que se faciliten a través del formulario de registro de Usuarios o por cualquier otro medio dispuesto a tal fin en el Portal, aplicación Android y/o aplicación IOS. Asimismo, el Usuario consiente expresamente que LA EMPRESA pueda ceder dichos datos personales a otros Usuarios y/o terceros.
+Los datos personales serán incorporados al fichero de Clientes de titularidad de LA EMPRESA.
+La información personal del Usuario se procesa y almacena en servidores o medios magnéticos que mantienen altos estándares de seguridad y protección tanto física como tecnológica. Una vez registrados los datos del Usuario, LA EMPRESA los podrá vender, alquilar y/o compartir de acuerdo con los límites permitidos por las normas peruanas aplicables. Puede suceder que en virtud de órdenes judiciales, o de regulaciones legales, LA EMPRESA se vea obligada a revelar información a las autoridades o terceras partes bajo ciertas circunstancias, o bien en casos que terceras partes puedan interceptar o acceder a cierta información o transmisiones de datos, en cuyo caso LA EMPRESA no responderá por la información que sea revelada.
+El Usuario presta su consentimiento para que se puedan transferir sus datos en los términos y condiciones anteriormente indicados, a otras entidades con destino a un país extranjero.
+Los datos se mantendrán en el fichero mientras se consideren útiles con el fin que pueda  prestar y ofrecer su Servicios y darles trámite, enviarle por cualquier medio o soporte información y publicidad sobre las ofertas, promociones y recomendaciones de LA EMPRESA y de terceros que considere pertinente, así como para realizar encuestas, estadísticas y análisis de tendencias de mercado.
+El Usuario autoriza a LA EMPRESA a conservar sus datos una vez finalizada la relación contractual, para el cumplimiento de las obligaciones legales pertinentes, y para que pueda recibir información publicitaria y ofertas comerciales, en respeto a lo establecido en el Registro “Gracias… no insista” de INDECOPI.
+Al Usuario le asiste de ejercer los derechos de acceso, rectificación, oposición y cancelación de los datos personales, los cuales podrá ejercer  mediante la opción de contacto que ponemos a su disposición.
+El usuario responde de la veracidad de los datos facilitados por el, reservándose LA EMPRESA el derecho a excluirlo, imponer las sanciones o realizar las denuncias respectivas, en  caso de constatar la falsedad o inexactitud de los mismos.
+El Usuario, por el simple hecho de registrarse y/o utilizar los servicios del Portal, aplicación Android y/o aplicación IOS de LA EMPRESA, acepta que éste le envíe toda clase de anuncios y publicidad (incluido, pero no limitado a correos electrónicos comerciales, folletos, cartas, etc.) a su dirección física y/o virtual declarada, con las novedades, ofertas y promociones de los servicios que brinda. Igualmente se le enviará anuncios y publicidad (incluido, pero no limitado a correos electrónicos comerciales, folletos, cartas, etc.) a su dirección física y/o virtual declarada, con las novedades, ofertas y promociones de los servicios brindados por terceros distintos a LA EMPRESA.
+En cualquier caso, si el Usuario no desea seguir recibiendo tales comunicaciones, podrá revocar la autorización de recepción otorgada mediante la presente, para lo cual deberá comunicarse con LA EMPRESA por medio del Portal, aplicación Android y/o aplicación IOS, a fin de ser eliminado de su base de datos.
+    </p>
+  <p>
+8. CORREO BASURA.
+Está prohibido que cualquier Usuario o tercero utilice el Portal, aplicación Android y/o aplicación IOS para transmitir, ya sea de forma directa o indirecta, cualquier correo masivo no deseado (Spam). Igualmente está prohibido recopilar información sobre nuestros Usuarios con la finalidad de enviar o facilitar el envío de SPAM, así como comunicaciones con ofrecimientos ilícitos, inmorales o promocionales. La contravención a esta prohibición podría acarrear el inicio de acciones legales ante las autoridades pertinentes, sin perjuicio que LA EMPRESA pueda tomar las medidas técnicas necesarias para impedir tales actos.
+    </p>
+    <p>
+9. RECLAMOS Y QUEJAS
+Conforme a lo establecido en el Código de Protección y Defensa del Consumidor, LA EMPRESA cuenta con un Libro de Reclamaciones a disposición del Usuario en sus oficinas.
+A tal fin el Usuario deberá recordar lo siguiente:
+RECLAMO es una manifestación  que el Usuario desea realizar a LA EMPRESA, mediante la cual expresa una disconformidad relacionada a algún producto o servicio que Ud. ha contratado con nuestra empresa.
+QUEJA es una manifestación que el Usuario desea realizar a LA EMPRESA,  mediante  la  cual  expresa  una  disconformidad, la cual no se  encuentra relacionada directamente a algún producto o servicio contratado con nuestra empresa.
+    </p>
+10. REQUERIMIENTOS DEL SISTEMA.
+Al utilizar el Portal, aplicación Android y/o aplicación IOS, el Usuario acepta que el hardware, software y acceso a Internet juega un papel crucial en su experiencia de navegación. En ese sentido, el Usuario acepta que LA EMPRESA no es responsable por ningún tema de hardware, software o acceso a Internet del propio Usuario, y por tanto exime de responsabilidad a  LA EMPRESA por dichos temas.
+El Usuario es el único y completo responsable por los gastos de conexión a Internet, así como por todo el equipo necesario para ello, su revisión, reparación o corrección y cualquier otro costo o gastos por el mantenimiento de los mismos.
+De otro lado, LA EMPRESA se reserva el derecho de comprobar automáticamente la versión del software del computador que utiliza el Usuario para acceder al Portal, aplicación Android y/o aplicación IOS y/o los Servicios ofrecidos, a fin de informar al Usuario que requiere instalar o actualizar determinado programa para acceder o mejorar su acceso al Portal, aplicación Android y/o aplicación IOS.
+    </p>
+    <p>
+11. CORTE DEL SERVIDOR.
+Existirán periodos regulares del mantenimiento del servidor así como mantenimiento del Portal, aplicación Android y/o aplicación IOS. LA EMPRESA hará su mejor esfuerzo para limitar el tiempo de inactividad del servidor a 12 horas. Sin embargo, LA EMPRESA no es responsable por ningún daño sufrido por el usuario como resultado del mantenimiento u otros tiempos de inactividad del servidor o el Portal, aplicación Android y/o aplicación IOS. El usuario acuerda eximir de responsabilidad a LA EMPRESA  por cualquier daño sufrido, incluido el lucro cesante y daño emergente que pueda ocasionarse por tales hechos.
+LA EMPRESA no será responsable por ningún daño o perjuicio sufrido por el Usuario debido a causas imprevistas o causa fuera del control de LA EMPRESA, tales como actos de naturaleza, guerra, terrorismo, motines, embargos, actos de autoridades civiles o militares, incendio, inundaciones, accidentes, huelgas o escasez de facilidades de transporte, combustible, energía, trabajo y materiales.
+    </p>
+    <p>
+12. MODIFICACIÓN DEL SITIO WEB.
+LA EMPRESA se reserva el derecho a eliminar o modificar cualquier parte del Portal, aplicación Android y/o aplicación IOS o Servicio ofrecido a través del mismo, en cualquier momento y sin previo aviso.
+    </p>
+    <p>
+13. DURACIÓN Y TERMINACIÓN.
+La prestación del servicio de Portal, aplicación Android y/o aplicación IOS tiene, en principio, una duración indefinida. LA EMPRESA, no obstante, está autorizada para dar por terminada o suspender la prestación del servicio del Portal, aplicación Android y/o aplicación IOS y/o de cualquiera de los Servicios ofrecidos en cualquier momento, sin perjuicio de lo que se hubiere dispuesto al respecto en las correspondientes Condiciones Particulares. Cuando ello sea razonablemente posible, LA EMPRESA advertirá previamente la terminación o suspensión de la prestación del servicio de Portal, aplicación Android y/o aplicación IOS.
+</p>
+<p>
+ 14. LEGISLACIÓN Y JURISDICCION APLICABLE.
+Los presentes “Términos y Condiciones Generales” se rigen en todos y cada uno de sus extremos por las leyes de la República del Perú.
+LA EMPRESA y el Usuario, con renuncia expresa a cualquier otro fuero, se someten al de los Juzgados y Tribunales del Distrito Judicial de Lima, Perú.
+</p>
+<p>
+15. GENERALIDADES
+Los presentes Términos y Condiciones Generales se interpretarán de forma concordante con las Condiciones Particulares. En caso de existir discrepancia entre lo establecido en los Términos y Condiciones Generales y las Condiciones Particulares, prevalecerá lo dispuesto en ésta último.
+    </p>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close  waves-effect waves-green btn-flat purple darken-1 white-text right" >Aceptar</a>
+    </div>
+  </div>
+
+
+  <!--Import jQuery before materialize.js-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyFz0Q9ZZLMmgqJhck4soRfa0V1s71jQ&libraries=geometry,places" async defer></script>
+  <script type="text/javascript" src="../js/Constantes.js"></script>
+  <script type="text/javascript" src="../materialize/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/util.js"></script>
+  <script type="text/javascript" src="../js/registro_usuario.js"></script>
+
+  </body>
+</html>

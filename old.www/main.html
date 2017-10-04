@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="css/maps-helpers.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script>
+        if (!localStorage.getItem("usuario")) {
+            window.location = 'index.html';
+        }
+        window.BOTON_SELECTED = '0';
+    </script>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+</head>
+
+<body>
+
+    <!--Html include de loading-->
+    <div id="container_pre_loading"></div>
+    <!--Html include menu principal-->
+    <div id="container_menu_principal"></div>
+
+
+
+
+    <div id="main_body">
+
+        <div class="nav-wrapper back-orange" id="navigator">
+            <div class="col s12">
+                <a href="#!" class="breadcrumb"><span id="text-navigator" >Anuncios</span></a>
+                <i class="material-icons right white-text iconRight" id="filtroPublicacion"><img src="images/filter-icon.png" class="update-responsive-3" /></i>
+            </div>
+        </div>
+
+        <div id="content-main">
+
+        </div>
+
+    </div>
+
+    <div id="filtro" style="display:none;">
+
+        <div class="nav-wrapper back-orange" id="navigator">
+            <div class="col s12">
+                <!-- <div class="breadcrumb"><i  class="material-icons left btnBack regresar_busco" >keyboard_arrow_left</i> ANUNCIOS</span></div> -->
+                <div class="breadcrumb"><img src="images/left.png" class="botonAtrasimg btnBack regresar_busco" /> ANUNCIOS</div>
+            </div>
+        </div>
+
+
+        <div class="container-spacing-detalle-pub2" style="padding-top:10px;">
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">subject</i>
+                    <input name="titulo" id="asunto" type="text" class="inputFiltro">
+                    <label for="asunto">Asunto</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">list</i>
+                    <select name="distrito" id="distritoCb" class="inputFiltro"></select>
+                    <label>Distrito</label>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="input-field col s6 without-top with-bottom">
+                    <a class="waves-effect waves-light btn total-width limpiarFiltro">LIMPIAR</a>
+                </div>
+
+
+                <div class="input-field col s6 without-top with-bottom">
+                    <a class="waves-effect waves-light btn total-width aplicarFiltro">FILTRAR</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="detalle" style="display:none;">
+
+        <div class="nav-wrapper back-orange" id="navigator">
+            <div class="col s12">
+                <!-- <div class="breadcrumb"><span><i  class="material-icons left btnBack regresar_busco" >keyboard_arrow_left</i> ANUNCIOS</span></div> -->
+                <div class="breadcrumb"><img src="images/left.png" class="botonAtrasimg btnBack regresar_busco" /> ANUNCIOS</div>
+            </div>
+        </div>
+
+        <div class="container-spacing-detalle-pub2" style="padding-top:20px;">
+            <div class="row" style="text-align:center">
+                <img id="imgDetallePrincipal" class="responsive-img z-depth-2" style="margin-bottom:20px !important;" />
+                <h4 id="detalleTitulo" style="font-size: 1.7rem;line-height: 100%;margin-bottom: 0px;color:#60116A;"></h4>
+            </div>
+
+            <div class="row" style="text-align:center;margin-bottom:0px;">
+
+                <p id="decripcionDetalle" class="flow-text"></p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div w3-include-html="views/generic/footer.html"></div>
+
+    <script>
+        w3IncludeHTML();
+    </script>
+
+</body>
+
+<script>
+    window.SHOW_PRE_LOADING = true;
+</script>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/Constantes.js"></script>
+<script type="text/javascript" src="materialize/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<script src="js/classie.js"></script>
+<script src="js/notificationFx.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyFz0Q9ZZLMmgqJhck4soRfa0V1s71jQ&libraries=places" async defer></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+
+</html>
