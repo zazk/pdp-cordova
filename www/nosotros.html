@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+    <!--Import sweetalert.css-->
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <!--Css para maps-->
+    <link rel="stylesheet" type="text/css" href="css/maps-helpers.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script>
+        if (!localStorage.getItem("usuario")) {
+            window.location = 'index.html';
+        }
+    </script>
+
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+    <!--Import Estilos CSS-->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+
+</head>
+
+<body>
+
+    <!--Html include de loading-->
+    <div id="container_pre_loading"></div>
+    <!--Html include menu principal-->
+    <div id="container_menu_principal"></div>
+
+    <div id="container_menu_principal"></div>
+
+    <div class="nav-wrapper back-orange" id="navigator">
+        <div class="col s12">
+            <a href="#!" class="breadcrumb"><span id="text-navigator">Conócenos</span></a>
+            <!-- <i class="material-icons right white-text iconRight">info_outline</i> -->
+        </div>
+    </div>
+
+
+    <div id="main_body" style="width:100%;padding:5px 20px 70px 20px;">
+
+        <p class="flow-text">Somos un equipo, del que puede formar parte cualquier usuario que descargue la aplicación. Crecemos cada día y mejoramos constantemente, nuestro mayor objetivo es que todo perrito perdido vuelva a casa.</p>
+
+        <p class="flow-text">Al mismo tiempo ofrecer información de noticias, eventos y promociones útiles y de interés relacionada a nuestros engreídos. También poner a disposición los clasificados perrunos más completos, donde podrás encontrar petshops, veterinarias, restaurants pet friendly, paseadores de perritos, entrenadores, hoteles para perritos, pastelerías y organizadores de eventos caninos. Pudiendo geo localizarte y encontrar el más cercano. Todo será más fácil y rápido.</p>
+
+
+        <p class="flow-text"> <b style="color:#60116A;font-size: 5.2vw;">Misión:</b><br>Hacer felices a los perros a través de brindar una solución tecnológica gratuita y efectiva para los extravíos, apoyada en la colaboración de toda la comunidad de amigos de los perros.</p>
+
+
+        <p class="flow-text"><b style="color:#60116A;font-size: 5.2vw;">Visión:</b><br>Convertirnos en el máximo referente de ayuda a los perros gracias a la innovación constante y a la colaboración de toda la comunidad de amantes de los perros.</p>
+
+
+    </div>
+
+
+    <div w3-include-html="views/generic/footer.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+</body>
+<script>
+    window.SHOW_PRE_LOADING = true;
+    window.SLEEP_LOADING = 1000;
+</script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/Constantes.js"></script>
+<script type="text/javascript" src="materialize/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<script src="js/classie.js"></script>
+<script src="js/notificationFx.js"></script>
+
+<script type="text/javascript" src="js/menu.js"></script>
+
+
+</html>

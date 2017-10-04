@@ -1,0 +1,40 @@
+.container-spacing-form{
+  padding: 20px 1% 50px 1%;
+}
+
+.container-spacing{
+  padding: 20px 1% 20px 1%;
+}
+
+.btn-total-width {
+   width: 100%;
+}
+
+.contenedor-card-spacing {
+     padding: 10px 15px 15px 10px;
+}
+
+.container-spacing-no-top{
+  padding: 0px 20px 60px 20px;
+}
+
+.subrayado-basico{
+  border-bottom: 1px #333 solid;
+}
+
+.header-component-basico{
+  height:43px;padding-left:15px;padding-right:15px;
+}
+
+.container-spacing-detalle-pub{
+  padding: 20px 20px 60px 20px;
+}
+
+.container-spacing-detalle-pub2{
+  padding: 0px 20px 60px 20px;
+}
+
+.container-spacing-detalle-pub3{
+  margin-top: 0px !important;
+  padding: 0px 20px 60px 20px;
+}

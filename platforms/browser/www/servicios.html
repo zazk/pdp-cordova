@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+    <!--Import sweetalert.css-->
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <!--Css para maps-->
+    <link rel="stylesheet" type="text/css" href="css/maps-helpers.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script>
+        if (!localStorage.getItem("usuario")) {
+            window.location = 'index.html';
+        }
+        window.BOTON_SELECTED = '3';
+    </script>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyFz0Q9ZZLMmgqJhck4soRfa0V1s71jQ&libraries=geometry,places"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+    <script src="js/modernizr.custom.js"></script>
+    <!--Import Estilos CSS-->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+    <style>
+        [type="checkbox"].filled-in:checked+label:after {
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #fdd835;
+            background-color: #8e24aa;
+            z-index: 0;
+        }
+
+        [type="checkbox"].filled-in:not(:checked)+label:after {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            border: 2px solid #fdd835;
+            top: 0px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Html include de loading-->
+    <div id="container_pre_loading"></div>
+    <!--Html include menu principal-->
+    <div id="container_menu_principal"></div>
+
+    <div id="container_menu_principal"></div>
+
+    <div class="nav-wrapper back-orange center" id="navigator">
+        <div class="col s12">
+            <a href="registro_empresa.html" id="publicar" class="breadcrumb" style="margin-left:35px;"><span id="text-navigator" ><b style="color:#60116A;">REGISTRA TU NEGOCIO</b></span></a>
+            <i class="material-icons right white-text iconRight" id="btnFiltroNegocio"><img src="images/filter-icon.png" class="update-responsive-3" /></i>
+        </div>
+    </div>
+
+    <!-- <div class="nav-wrapper back-orange" id="navigator" >
+        <div class="col s12">
+            <a href="#!" class="breadcrumb"><span id="text-navigator" >SERVICIOS</span></a>
+            <i class="material-icons right white-text iconRight" id="btnFiltroNegocio"><img src="images/filter-icon.png" class="update-responsive-3" /></i>
+        </div>
+    </div> -->
+
+
+    <div id="main_body" style="width:100%;">
+
+    </div>
+    <input id="g-s-input" class="controls search-input-g" type="text" placeholder="Aproximar dirección">
+
+    <div w3-include-html="views/generic/footer.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <form id="formFiltroNegocio">
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat purple darken-1 white-text">Ok!</a>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    window.SHOW_PRE_LOADING = true;
+</script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/Constantes.js"></script>
+<script type="text/javascript" src="materialize/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+
+<script src="js/classie.js"></script>
+<script src="js/notificationFx.js"></script>
+
+<script type="text/javascript" src="js/menu.js"></script>
+
+<script type="text/javascript" src="js/views/servicios.js"></script>
+
+</html>

@@ -1,0 +1,251 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+    <!--Import Estilos CSS-->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+    <!--Import sweetalert.css-->
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <!--Css para maps-->
+    <link rel="stylesheet" type="text/css" href="css/maps-helpers.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <script>
+        if (!localStorage.getItem("usuario")) {
+            window.location = 'index.html';
+        }
+    </script>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!--Html include de loading-->
+    <div id="container_pre_loading"></div>
+    <!--Html include menu principal-->
+    <div id="container_menu_principal"></div>
+
+    <div id="container_menu_principal"></div>
+
+    <div class="nav-wrapper back-orange" id="navigator">
+        <div class="col s12">
+            <a href="#!" class="breadcrumb"><span id="text-navigator">MIS DATOS</span></a>
+            <!-- <i class="material-icons right white-text iconRight">account_circle</i> -->
+        </div>
+    </div>
+
+
+    <div id="main_body">
+
+        <div class="container-spacing-form">
+            <!-- Datos del usuario -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">perm_contact_calendar</i>
+                    <input name="persona.nroDocumento" id="dniPerfil" type="text" class="validate inputPerfil">
+                    <label class="active" for="dniPerfil">Nro. Documento</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">person_pin</i>
+                    <input name="persona.nombreCompleto" id="nombresPerfil" type="text" class="validate inputPerfil">
+                    <label class="active" for="nombresPerfil">Nombres</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input name="usuario" id="usuarioPerfil" type="text" class="validate inputPerfil">
+                    <label class="active" for="usuarioPerfil">Usuario</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input name="pass" value=" " id="passwordPerfil" type="password" class="validate inputPerfil">
+                    <label class="active" for="passwordPerfil">Ingrese una contraseña si desea cambiarla</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <input name="persona.contactoPrincipal.numero" id="telefonoPerfil" type="text" class="validate inputPerfil">
+                    <label class="active" for="telefono">Teléfono</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">location_city</i>
+                    <select name="persona.distrito" id="distritoPerfil" class="inputPerfil"></select>
+                    <label>Distrito</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col s8">
+                    <div style="padding-left:40px;">Recibir alertas</div>
+                </div>
+
+                <div class="col s4">
+                    <div class="switch">
+                        <label>
+                 <input type="checkbox" id="chkRecibirAlertas">
+                 <span class="lever"></span>
+               </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container center" style="color:#8e24aa;">
+
+                <p style="font-size:3.1vw;">PARA EL CORRECTO FUNCIONAMIENTO DE PATA DE PERRO HABILITA LA FUNCION UBICACIÓN DESDE TU TELEFONO</p>
+                <!-- <div class="col s8">
+                  <div style="padding-left:40px;">Activar ubicación</div>
+           </div>
+
+           <div class="col s4">
+             <div class="switch">
+               <label>
+                 <input type="checkbox" id="chkUbicacion">
+                 <span class="lever"></span>
+               </label>
+             </div>
+           </div> -->
+            </div>
+
+            <!-- //Datos del usuario -->
+
+            <div class="row">
+
+                <!-- Boton actualizar perfil -->
+                <div class="input-field col s12">
+                    <a id="btnActualizarPerfil" class="waves-effect waves-light btn btn-total-width yellow darken-3"><i class="material-icons right">update</i>Actualizar mis datos</a>
+                </div>
+                <!-- //Boton actualizar perfil -->
+
+                <!-- Boton agregar mascota -->
+                <div class="input-field col s12">
+                    <a id="btnOpenNewPet" class="waves-effect waves-light btn btn-total-width indigo lighten-1"><i class="material-icons right">pets</i>Agregar Engreido</a>
+                </div>
+                <!-- //Boton agregar mascota -->
+
+                <!-- Lista mascotas -->
+                <div class="col s12">
+                    <ul id="mascotasList" class="collapsible" data-collapsible="accordion">
+
+                        <!-- content Listado de mascotas -->
+
+                    </ul>
+                </div>
+                <!-- //Lista de mascotas -->
+            </div>
+        </div>
+
+        <!-- //Formulario perfil -->
+
+        <!-- modal nueva mascota -->
+        <div id="modalEditarMascota" class="modal modal-fixed-footer">
+            <a id="closeBtnModalMascota" style="position:absolute;top:0px;right:0px;z-index:5;"><i class="material-icons"  style="font-size:40px;color:#333;">cancel</i></a>
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col s12 center">
+                        <img id="imageNewPet" src="images/default-image.png" class="z-depth-4" style="width:200px;height:auto;">
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col s12" id="formMascota">
+                        <input type="hidden" class="inputMascota" name="id" id="idMascotaForm" />
+                        <div class="row">
+
+                            <div class="input-field col s12">
+                                <input name="nombre" id="mascotaNombre" type="text" class="inputMascota">
+                                <label for="mascotaNombre" id="mascotaNombre_">Nombre</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <select name="raza" id="razaMascota" class="inputMascota"></select>
+                                <label for="razaMascota" id="razaMascota_">Raza</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <select name="genero" id="generoMascota" class="inputMascota"></select>
+                                <label for="generoMascota" id="generoMascota_">Sexo</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <select name="tamanio" id="tamanioMascota" class="inputMascota"></select>
+                                <label for="tamanioMascota" id="tamanioMascota_">Tamaño</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <select name="color" id="colorMascota" class="inputMascota"></select>
+                                <label for="colorMascota" id="colorMascota_">Color</label>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <textarea name="desComentario" id="descripcionMascota" class="materialize-textarea inputMascota" data-length="15"></textarea>
+                                <label for="descripcionMascota" id="descripcionMascota_">Descripción</label>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="btnGrabarMascota" class="waves-effect waves-light btn btn-total-width indigo lighten-1">Listo!</a>
+            </div>
+        </div>
+        <!-- //modal nueva mascota -->
+
+
+    </div>
+
+    <div w3-include-html="views/generic/footer.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+</body>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/Constantes.js"></script>
+<script type="text/javascript" src="materialize/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<script src="js/classie.js"></script>
+<script src="js/notificationFx.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyFz0Q9ZZLMmgqJhck4soRfa0V1s71jQ&libraries=places" async defer></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<!-- script manager perfil -->
+<script type="text/javascript" src="js/views/perfil_usuario.js"></script>
+<!-- //script manager perfil -->
+
+</html>

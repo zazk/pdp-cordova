@@ -1,63 +1,37 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-body {
+html {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
+    background-color:#FFFFFF;
     background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+
     height:100%;
     margin:0px;
     padding:0px;
-    text-transform:uppercase;
     width:100%;
+	font-family:'BreeLight';
+
 }
 
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+.label-count {
+    position: absolute;
+    top: 20px;
+    right: 1px;
+    font-size: 10px;
+    line-height: 15px;
+    background-color: #000;
+    padding: 0 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
 }
+
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -102,14 +76,317 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+/*
+Style Mapa
+*/
+
+#map-canvas {
+  	width: 100%;
+  	height: 400px;
+	margin: 0;
+	padding: 15px;
+}
+
+/*
+Style base
+*/
+
+textarea:focus {
+  border-bottom: 1px solid #000 !important;
+  -webkit-box-shadow: 0 1px 0 0 #000 !important;
+  -moz-box-shadow: 0 1px 0 0 #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+
+input:focus {
+  border-bottom: 1px solid #000 !important;
+  -webkit-box-shadow: 0 1px 0 0 #000 !important;
+  -moz-box-shadow: 0 1px 0 0 #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}
+
+nav{background-color: #60116A !important;line-height:60px !important;height:60px !important;padding-bottom:5px !important}
+nav a{color:#fff;}
+
+.navbar-fixed nav { padding-top: 5px;}
+
+.icon-space{line-height: 60px !important}
+.side-nav li{line-height: 60px;}
+.side-nav a{font-weight: 400;}
+.side-nav .userView {padding: 20px 20px !important;}
+.userView{background:#60116A !important;padding-bottom:15px}
+.responsive-percentage{max-width:50% !important;margin-bottom: -30px;}
+.responsive-percentage-footer{max-width:16%}
+.name, .email{font-size:12px !important;font-weight:0;margin-bottom: -5px;}
+.img-menu{margin-top: -50px; width: 15%;}
+.responsive-percentage-logo{max-width:85%}
+.responsive-percentage-logo-int{max-width:70%}
+
+.btn-floating i{color:#333 !important;}
+.fixed-action-btn.toolbar ul li a {color:#333 !important;}
+
+.fixed-bottom{position:fixed;bottom:0}
+.top-ahora{margin-top:-6px}
+
+/*.responsive-image{width: 100%; background-size: 80% 100%;}*/
+.header {color: #8F1517; font-weight: 999;}
+
+ul#nav-user li {display: block;line-height: 60px;}
+ul#nav-user li img {vertical-align: middle;margin-right:10px;}
+
+.call-us{background:#395792;line-height:0px !important}
+.message{background:#DADADA}
+.call-us a{line-height:32px;}
+.call-us a{color:#FFF !important;}
+.call-us i{color:#FFF !important;}
+.btn-mensaje{width:100%;background:#395792}
+.btn-mensaje:hover{background:#395792}
+.text-mensaje{color:#395792 !important;text-align:center !important;padding:20px;font-size:3.5vw !important;}
+.padding-top-bottom{    padding: 8px 0px 10px 0px; height: 48px;}
+.padding-top-2{padding-top:30px}
+.margin-top-2{margin-top:30px}
+
+.margin-textarea{margin:12px 0px 8px 0px !important;}
+
+.social{line-height:45px !important;padding-top:12px}
+.social a{display:inline;padding:5px;}
+
+ul li .call{height:60px}
+ul li .small{font-size:8px;font-weight:normal;padding-top: 5px; height: 18px;}
+ul li .normal{font-size:14px;padding-bottom:8px;height: 35px;}
+
+.card-content{padding:10px !important;background:#F3F3F3 !important;}
+.card-reveal{background:#F3F3F3 !important;}
+.card-reveal i{font-size: 3vw !important;}
+.card .card-title{font-size: 3.5vw !important;font-weight:500 !important;text-transform:uppercase !important;}
+.card p{font-size: 3vw !important;text-align:justify !important;}
+.back-black{background:#000; border: none; padding: 10px 0px 5px 0px;}
+.back-orange{background:#F9BE0C; border: none; padding: 10px 0px 5px 0px;}
+
+
+.breadcrumb{line-height:25px !important;font-size:13px !important;color:#FFF;}
+.breadcrumb:before{color:#FFF !important;}
+.breadcrumb span{margin-left:15px !important;}
+#navigator div i{margin-right:10px;font-size:13px;margin-top:3px}
+#text-navigator{text-transform:uppercase;}
+.text-navigator-special{color:#F9BE0C}
+
+.padding-top-1{margin-top:10px !important;color:#EA1932 !important;}
+html, body { width:100%;  overflow-x:hidden; }
+
+.margin-icon{margin-top:15px !important;max-width:80%;}
+.margin-icon-2{max-width:60%;}
+.back-loader{min-width:100%;height:100vh;background:#ccc;opacity:0.5;z-index:9997;position: absolute;}
+.loader {position: absolute;top :0;left: 0;right: 0;bottom: 0;margin: auto;z-index:9999;}
+
+
+.logo-preload{position:absolute;top:35%;bottom:0;left:0;right:0;z-index: 99 !important;margin: auto;text-align:center;}
+
+.special-text{font-size:9px !important;display:inline !important;}
+
+.answer{background:#FFFFFF;color:#9E9E9E;text-align:left;text-transform:lowercase !important;}/*claro con letra oscura*/
+.question{background:#DADADA;color:#9E9E9E;text-align:right;text-transform:lowercase !important;}
+
+.answer div small, .question div small{color:#395792 !important;text-transform:none}
+
+.valign-notification{margin-top:10px;}
+
+/*.tabs{background:#395792 !important;}*/
+#mensajes.container{background:#373F4E !important; width:99% !important;}
+/*
+.tabs .tab a{color:#6C7FA9 !important; }
+.indicator{display:none !important;}
+.tabs .tab a:hover, .tabs .tab a.active { color: #FFF !important;}*/
+
+#mobile-menu > li > a{
+    font-size:3.2vw !important;
+}
+
+textarea.materialize-textarea {
+    padding: .3rem 0 2rem 0;
+	font-size:2.8vw;
+}
+
+.back-white {
+    background: #fff !important;
+}
+
+
+
+.collapsible-header {
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.collapsible {
+    border-top: none !important;
+	border-right: none !important;
+	border-left: none !important;
+	box-shadow: none !important;
+}
+.total-width{width:100%;font-family:'BreeRegular' !important; background-color: #F9BE0C;color:#60116A;font-size: 4vw !important;padding-top:3px !important;}
+.total-width:hover{background-color: #F9BE0C;color:#60116A}
+
+.total-width-2{font-family:'BreeRegular' !important; background-color: #F9BE0C;color:#60116A;font-size: 4vw !important;padding-top:3px !important;}
+.total-width-2:hover{background-color: #F9BE0C;color:#60116A}
+
+.modal-content h5{color:#60116A !important; text-align:center;}
+.modal-content .input-field label{color:#60116A !important;}
+
+.image-pet{width:210px;height:210px;background-color:#cccccc;margin-top: 22px;}
+.image-qr{width:150px;height:150px;background-color:#cccccc;margin:0 auto;}
+
+.image-qr > img{
+  width:150px;height:150px;
+}
+
+.tab-general{
+  background-color: #A24097;
+  height: 40px;
+}
+
+.tab-general .tab a{height: 40px;color:#333 !important;font-size: 3.8vw !important;background-color: #fff; border-color: #A24097; border-style:solid; border-width: 1px;}
+
+.tab-general .tab a:hover, .tab-general .tab a.active { height: 40px;color:#fff !important;font-size: 4vw !important; font-weight: bold;border-color: #A24097 !important; border-style:solid !important; border-width: 1px !important;}
+
+.btnBack {
+  font-size:27px !important; margin-top:-2px !important;
+}
+
+.btnFilter{
+  font-size:25px !important; margin-top:-4px !important;
+}
+
+.iconRight{
+  font-size:23px !important; margin-top:-1px !important;
+}
+
+.botonAtrasimg{
+  margin: 0px 8px -3px 8px;
+}
+
+.texto-lista{
+  font-size:3.2vw !important;
+}
+
+/*
+.tabs .tab a{color:#6C7FA9 !important; }
+.indicator{display:none !important;}
+.tabs .tab a:hover, .tabs .tab a.active { color: #FFF !important;}*/
+
+.update-responsive-2 {
+    max-width: 60% !important;
+    height: auto !important;
+}
+
+.update-responsive-3 {
+    max-width: 75% !important;
+    height: auto !important;
+}
+
+.tabs .tab {
+    line-height: 35px !important;
+    height: 35px !important;
+}
+
+ @media only screen and (min-width: 450px) and (max-width: 2500px) {
+   nav a.button-collapse {
+    display: block;
+   }
+
+   .card .card-title{font-size: 2vw !important;}
+	.card p{font-size: 1.5vw !important;}
+	/*.special-text{font-size:20px !important;}*/
+
+  .tabs .tab a {
+		padding: 5px 12px;
+	}
+
+   .update-responsive {
+		max-width: 70% !important;
+		height: auto !important;
+	}
+
+    .update-responsive-2 {
+		max-width: 70% !important;
+		height: auto !important;
+	}
+
+    .update-responsive-3 {
+        max-width: 80% !important;
+        height: auto !important;
+    }
+
+ }
+
+@media only screen and (orientation: portrait) {
+/*.special-text{font-size:2.2vw !important;}*/
+
+	#responsive-image{
+        background-color: white;
+        background-image: url('../images/size/lite/banner-v.jpg');
+		background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center center;
+        width: 100%;
+        height:100vh;
+	}
+}
+
+@media only screen and (orientation: landscape) {
+
+/*.special-text{font-size:1.5vw !important;}*/
+	#responsive-image{
+        background-color: white;
+        background-image: url('../images/size/lite/banner-h.jpg');
+		background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position:15% center;
+        height:100vh;
+	}
+}
+
+
+@font-face {
+    font-family: 'BreeBold';
+    src: url('../font/BreeBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeExtrabold';
+    src: url('../font/BreeExtrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeLight';
+    src: url('../font/BreeLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeRegular';
+    src: url('../font/BreeRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeThin';
+    src: url('../font/BreeThin.otf') format('opentype');
+}
+
+.btn{
+  padding-top: 0px !important;
+  padding-bottom: 10px !important;
+  font-size: 3.4vw !important;padding-left:15px !important;padding-right:15px !important;
 }
