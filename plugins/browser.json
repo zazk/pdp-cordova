@@ -9,7 +9,29 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "cordova-plugin-firebase": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        },
+        "es6-promise-plugin": {
+            "PACKAGE_NAME": "com.patadeperroapp.app"
+        }
+    }
 }

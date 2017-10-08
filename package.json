@@ -12,15 +12,31 @@
     "dependencies": {
         "cordova-android": "^6.2.3",
         "cordova-browser": "^4.1.0",
-        "cordova-plugin-whitelist": "^1.3.2"
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-compat": "^1.2.0",
+        "cordova-plugin-console": "^1.1.0",
+        "cordova-plugin-firebase": "^0.1.24",
+        "cordova-plugin-geolocation": "^2.4.3",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "cordova-plugin-x-socialsharing": "^5.2.0",
+        "cordova.plugins.diagnostic": "^3.7.0",
+        "es6-promise-plugin": "^4.1.0"
     },
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-geolocation": {
+                "GEOLOCATION_USAGE_DESCRIPTION": "Pata de Perro would like to use your location"
+            },
+            "cordova-plugin-firebase": {},
+            "cordova.plugins.diagnostic": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-x-socialsharing": {}
         },
         "platforms": [
             "android",
-            "browser"
+            "browser",
+            "ios"
         ]
     }
 }
