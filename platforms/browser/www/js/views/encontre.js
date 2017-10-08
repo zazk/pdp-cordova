@@ -194,7 +194,25 @@ document.addEventListener(
       //success invoke
       success: function(httpResponse) {
         var data = httpResponse.data;
+        if (params.mascotaClave) {
+          var filtered = [];
+          for (var k = 0, t = data.length; k < t; k++) {
+            var item = data[k];
 
+            console.log(item.mascotaNombre);
+            console.log(item.descripcion);
+            console.log(item.desDistrito);
+            console.log(item.desRaza);
+            if (
+              item.mascotaNombre.search(params.mascotaClave) >= 0 ||
+              item.descripcion.search(params.mascotaClave) >= 0 ||
+              item.desDistrito.search(params.mascotaClave) >= 0
+            ) {
+              filtered.push(item);
+            }
+          }
+          data = filtered;
+        }
         if (data) {
           if (dataCatastroDistrito) {
             try {
@@ -362,6 +380,7 @@ document.addEventListener(
     }, 500);
   };
 
+  //Crear Mapa y Listadoxs
   encontreService.crearMapaRadio = function(data, position, isDistrito) {
     //UtilFn.showMaskLoading('hide');
     console.log('encontreService.crearMapaRadio()-->>>');

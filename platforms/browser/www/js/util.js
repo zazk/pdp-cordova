@@ -518,16 +518,16 @@ var UtilFn = {
     var networkState = navigator.connection.type;
 
     var states = {};
-    states[navigator.connection.UNKNOWN] = 'Unknown connection';
-    states[navigator.connection.ETHERNET] = 'Ethernet connection';
-    states[navigator.connection.WIFI] = 'WiFi connection';
-    states[navigator.connection.CELL_2G] = 'Cell 2G connection';
-    states[navigator.connection.CELL_3G] = 'Cell 3G connection';
-    states[navigator.connection.CELL_4G] = 'Cell 4G connection';
-    states[navigator.connection.CELL] = 'Cell generic connection';
-    states[navigator.connection.NONE] = 'No network connection';
+    states[Connection.UNKNOWN] = 'Unknown connection';
+    states[Connection.connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.connection.WIFI] = 'WiFi connection';
+    states[Connection.connection.CELL_2G] = 'Cell 2G connection';
+    states[Connection.connection.CELL_3G] = 'Cell 3G connection';
+    states[Connection.connection.CELL_4G] = 'Cell 4G connection';
+    states[Connection.connection.CELL] = 'Cell generic connection';
+    states[Connection.connection.NONE] = 'No network connection';
 
-    if (navigator.connection.NONE == networkState) {
+    if (Connection.NONE == networkState) {
       VERIFY_ENABLE_ACTIVE = true;
       UtilFn.modalInfoErrorGpsAndNetwork(
         'Error de Red',
