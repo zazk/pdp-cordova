@@ -204,29 +204,6 @@ document.addEventListener(
         // console.log('data publicacion -----------------------------------------');
         // console.log(JSON.stringify(data));
         // console.log('---------------------------------------------------------');
-        console.log('We got an If');
-        if (params.mascotaClave) {
-          console.log(params.mascotaClave);
-          var clave = params.mascotaClave.toLowerCase();
-          var filtered = [];
-          for (var k = 0, t = data.length; k < t; k++) {
-            var item = data[k];
-            var descripcion = item.descripcion || '';
-            var nombre = item.nombre || '';
-            console.log(item.mascotaNombre);
-            console.log(item.descripcion);
-            console.log(item.desDistrito);
-            console.log(item.desRaza);
-            if (
-              nombre.toLowerCase().search(clave) >= 0 ||
-              descripcion.toLowerCase().search(clave) >= 0 ||
-              item.desDistrito.toLowerCase().search(clave) >= 0
-            ) {
-              filtered.push(item);
-            }
-          }
-          data = filtered;
-        }
 
         if (data) {
           if (dataCatastroDistrito) {
@@ -588,18 +565,10 @@ document.addEventListener(
 
       if (mapRadio) {
         setTimeout(function() {
-          console.log('rezise del mapa BUSCOOO');
+          console.log('rezise del mapa');
           var centerTemp = mapRadio.getCenter();
           google.maps.event.trigger(mapRadio, 'resize');
           mapRadio.setCenter(centerTemp);
-
-          //Added Marker from Local position.
-          var marker = new google.maps.Marker({
-            position: { lat: centerTemp.lat(), lng: centerTemp.lng() },
-            map: mapRadio,
-            title: 'Mi Posiciòn'
-          });
-          //------------
         }, 500);
       }
 

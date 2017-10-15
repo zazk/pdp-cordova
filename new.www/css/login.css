@@ -1,0 +1,141 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#60116A;
+    background-attachment:fixed;
+
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+	font-family:'BreeRegular' !important;
+
+}
+
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+input:not([type]), input[type=text], input[type=password],
+input[type=email], input[type=url], input[type=time], input[type=date],
+input[type=datetime], input[type=datetime-local], input[type=tel],
+input[type=number], input[type=search], textarea.materialize-textarea{
+
+	font-family:'BreeThin' !important;
+	font-size: 4vw !important;
+	color:#F9BE0C !important;
+
+}
+
+input:not([type]).validate+label, input[type=text].validate+label,
+input[type=password].validate+label,
+input[type=email].validate+label, input[type=url].validate+label,
+input[type=time].validate+label, input[type=date].validate+label,
+input[type=datetime].validate+label, input[type=datetime-local].validate+label,
+input[type=tel].validate+label, input[type=number].validate+label,
+input[type=search].validate+label, textarea.materialize-textarea.validate+label {
+
+	font-size: 4.2vw !important;
+	color:#F9BE0C !important;
+
+}
+
+.container-spacing{padding:0px 20px}
+.without-bottom {margin-bottom:0px !important;}
+.without-top {margin-top:0px !important;}
+.total-width{width:100%;font-family:'BreeRegular' !important; background-color: #F9BE0C;color:#60116A;font-size: 4vw !important;padding-top:3px !important;}
+.total-width:hover{background-color: #F9BE0C;color:#60116A}
+.bottom-2{margin-top:2px !important;}
+.with-top{margin-top:20px;}
+.with-bottom{margin-bottom:20px;}
+
+.back-loader{min-width:100%;height:100vh;background:#ccc;opacity:0.5;z-index:9997;position: absolute;}
+.loader {position: absolute;top :0;left: 0;right: 0;bottom: 0;margin: auto;z-index:9999;}
+
+.row h5{color:#FFF;text-align:center;font-family:'BreeRegular' !important;font-size:5vw !important; }
+
+.responsive-image-percentage{max-width:40%;}
+
+.btn{
+  padding: 0px !important;
+}
+
+
+
+@media only screen and (orientation: portrait) {
+	img.responsive-image{
+        max-width: 80%;
+		min-width:80%;
+        height:auto;
+		margin-top:5%;
+	}
+
+}
+
+@media only screen and (orientation: landscape) {
+	img.responsive-image{
+        max-width: 55%;
+		min-width:55%;
+        height:auto;
+		display: inline;
+		position: relative;
+		margin-top:5%;
+	}
+
+	input:not([type]).validate+label, input[type=text].validate+label,
+	input[type=password].validate+label,
+	input[type=email].validate+label, input[type=url].validate+label,
+	input[type=time].validate+label, input[type=date].validate+label,
+	input[type=datetime].validate+label, input[type=datetime-local].validate+label,
+	input[type=tel].validate+label, input[type=number].validate+label,
+	input[type=search].validate+label, textarea.materialize-textarea.validate+label {
+
+		font-size: 3vw !important;
+		color:#F9BE0C !important;
+
+	}
+
+	.row h5{font-size:3vw !important; }
+
+}
+
+
+
+@font-face {
+    font-family: 'BreeBold';
+    src: url('../font/BreeBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeExtrabold';
+    src: url('../font/BreeExtrabold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeLight';
+    src: url('../font/BreeLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeRegular';
+    src: url('../font/BreeRegular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BreeThin';
+    src: url('../font/BreeThin.otf') format('opentype');
+}

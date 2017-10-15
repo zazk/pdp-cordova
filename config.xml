@@ -28,12 +28,12 @@
     <engine name="android" spec="^6.2.3" />
     <engine name="browser" spec="^4.1.0" />
     <engine name="ios" spec="^4.4.0" />
-    <plugin name="cordova-plugin-console" spec="^1.1.0" />
-    <plugin name="cordova-plugin-firebase" spec="^0.1.24" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Pata de Perro would like to use your location" />
     </plugin>
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
-    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.0" />
+    <plugin name="cordova-plugin-firebase" spec="^0.1.24" />
     <plugin name="cordova.plugins.diagnostic" spec="^3.7.0" />
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.0" />
 </widget>
