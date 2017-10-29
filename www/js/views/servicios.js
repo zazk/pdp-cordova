@@ -62,6 +62,14 @@ document.addEventListener("backbutton", function() {
                         }
                     });
 
+                    //Added Marker from Local position.
+                    var marker = new google.maps.Marker({
+                      position: { lat: position.coords.latitude, lng: position.coords.longitude },
+                      map: map,
+                      title: 'Mi Posiciòn'
+                    });
+                    //----------------
+
                     var input = document.getElementById('g-s-input');
                     searchBox = new google.maps.places.SearchBox(input);
                     map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);

@@ -75,7 +75,7 @@ loginGoogle : function(){
 		var emailRs= '';
 		if(tipo == 'fb'){
 				dataFb = data;
-				idRs = dataFb.authResponse.userID;
+				idRs = dataFb.userID;
 				//emailRs = dataFb.email;
 		}else if(tipo == 'go'){
 				dataGo = data;
@@ -116,7 +116,7 @@ loginGoogle : function(){
 						if(tipo == 'fb'){
 							$.ajax({
 								method: "GET",
-								url: 'https://graph.facebook.com/v2.9/me?access_token='+dataFb.authResponse.accessToken+'&fields=id,name,email&format=json',
+								url: 'https://graph.facebook.com/v2.9/me?access_token='+dataFb.accessToken+'&fields=id,name,email&format=json',
 								dataType:'json'
 							}).done(function(responseFb) {
 								UtilFn.showMaskLoading('hide');
@@ -183,28 +183,56 @@ loginGoogle : function(){
 	,
 	loginFb : function(){
 
-		facebookConnectPlugin.logout(
-			function() {
+		CordovaFacebook.logout({
+		   onSuccess: function() {
 		      console.log("FB The user is now logged out");
-			facebookConnectPlugin.login(
-				['email', 'user_likes'],
-				function(result) {
-					console.log('FB Result-------------------------------------');
-					console.log(JSON.stringify(result));
-						if(result.status == "connected") {
-
-									//alert('0:'+JSON.stringify(result))
-									appLogin.validateRS(result,'fb');
-						}
-					},
-				function(result) {
-								console.log('FB Login Error-------------------------------------');
-								console.log(JSON.stringify(result));
-								//alert('1:'+JSON.stringify(result))
-					}
-				);
+					CordovaFacebook.login({
+					      permissions: ['email', 'user_likes'],
+					       onSuccess: function(result) {
+					          if(result.declined.length > 0) {
+											console.log('FB Result-------------------------------------');
+					            console.log(JSON.stringify(result));
+											//alert('0:'+JSON.stringify(result))
+											appLogin.validateRS(result,'fb');
+					          }
+					       },
+					       onFailure: function(result) {
+									 console.log('FB Login Error-------------------------------------');
+									 console.log(JSON.stringify(result));
+									 //alert('1:'+JSON.stringify(result))
+					       }
+					    });
 		   }
-		);
+		});
+
+			// CordovaFacebook.getLoginStatus(
+			// 		function(){
+			// 			console.log('ok')
+			// 			facebookConnectPlugin.logout(function(){
+			//
+			// 						console.log('fb sesion cerrada');
+			//
+			// 			 }, function(){})
+			// 		},
+			// 		function(){
+			// 				console.log('no ok')
+			// 		}
+			// 	);
+
+		// CordovaFacebook.login({
+		//       permissions: ['email', 'user_likes'],
+		//        onSuccess: function(result) {
+		//           if(result.declined.length > 0) {
+		// 						console.log('FB Result-------------------------------------');
+	  //             console.log(JSON.stringify(result));
+		// 						appLogin.validateRS(result,'fb');
+		//           }
+		//        },
+		//        onFailure: function(result) {
+		// 				 console.log('FB Login Error-------------------------------------');
+		// 				 console.log(JSON.stringify(result));
+		//        }
+		//     });
 	}
 ,
 saveUsuarioFB : function(data){
@@ -274,7 +302,7 @@ saveUsuarioFB : function(data){
 
 						 }else{
 							 $('.btnLoginManager').removeClass('disabled');
-							UtilFn.showMessageToast("Su usuario/contraseña es errónea.");
+							UtilFn.showMessageToast("Su usuario/contraseña errónea.");
 
 						 }
 

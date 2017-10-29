@@ -1,70 +1,181 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
-    },
-    "config_munge": {
-        "files": {}
-    },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-firebase": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova.plugins.diagnostic": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "es6-promise-plugin": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Camera\"><param name=\"browser-package\" value=\"Camera\" /></feature>",
+              "count": 1
+            }
+          ]
         }
-    },
-    "dependent_plugins": {},
-    "modules": [
-        {
-            "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
-            "id": "cordova-plugin-firebase.FirebasePlugin",
-            "pluginId": "cordova-plugin-firebase",
-            "clobbers": [
-                "FirebasePlugin"
-            ]
-        },
-        {
-            "file": "plugins/es6-promise-plugin/www/promise.js",
-            "id": "es6-promise-plugin.Promise",
-            "pluginId": "es6-promise-plugin",
-            "runs": true
-        },
-        {
-            "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-            "id": "cordova-plugin-x-socialsharing.SocialSharing",
-            "pluginId": "cordova-plugin-x-socialsharing",
-            "clobbers": [
-                "window.plugins.socialsharing"
-            ]
-        }
-    ],
-    "plugin_metadata": {
-        "cordova-plugin-whitelist": "1.3.2",
-        "cordova-plugin-compat": "1.2.0",
-        "cordova-plugin-geolocation": "2.4.3",
-        "cordova-plugin-firebase": "0.1.24",
-        "cordova.plugins.diagnostic": "3.7.0",
-        "cordova-plugin-console": "1.1.0",
-        "es6-promise-plugin": "4.1.0",
-        "cordova-plugin-x-socialsharing": "5.1.8"
+      }
     }
+  },
+  "installed_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-facebook": {
+      "FACEBOOK_APP_ID": "1393050120751260",
+      "FACEBOOK_DISPLAY_NAME": "pataPerroTest",
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "file": "plugins/cordova-plugin-firebase/www/firebase-browser.js",
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "pluginId": "cordova-plugin-firebase",
+      "clobbers": [
+        "FirebasePlugin"
+      ]
+    },
+    {
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "id": "es6-promise-plugin.Promise",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+      "id": "cordova-plugin-x-socialsharing.SocialSharing",
+      "pluginId": "cordova-plugin-x-socialsharing",
+      "clobbers": [
+        "window.plugins.socialsharing"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "id": "cordova-plugin-camera.Camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "id": "cordova-plugin-camera.camera",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-camera/src/browser/CameraProxy.js",
+      "id": "cordova-plugin-camera.CameraProxy",
+      "pluginId": "cordova-plugin-camera",
+      "runs": true
+    },
+    {
+      "file": "plugins/cordova-plugin-facebook/www/CordovaFacebook.js",
+      "id": "cordova-plugin-facebook.CordovaFacebook",
+      "pluginId": "cordova-plugin-facebook",
+      "clobbers": [
+        "CordovaFacebook"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
+      "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
+      "pluginId": "cordova-plugin-document-viewer",
+      "clobbers": [
+        "cordova.plugins.SitewaertsDocumentViewer",
+        "SitewaertsDocumentViewer"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+      "id": "cordova-plugin-googleplus.GooglePlus",
+      "pluginId": "cordova-plugin-googleplus",
+      "clobbers": [
+        "window.plugins.googleplus"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "id": "cordova-plugin-network-information.network",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection",
+        "navigator.network.connection"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "id": "cordova-plugin-network-information.Connection",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
+    },
+    {
+      "file": "plugins/cordova-plugin-network-information/src/browser/network.js",
+      "id": "cordova-plugin-network-information.NetworkInfoProxy",
+      "pluginId": "cordova-plugin-network-information",
+      "runs": true
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-console": "1.1.0",
+    "cordova-plugin-firebase": "0.1.24",
+    "cordova-plugin-geolocation": "2.4.3",
+    "cordova-plugin-whitelist": "1.3.2",
+    "es6-promise-plugin": "4.1.0",
+    "cordova-plugin-x-socialsharing": "5.1.8",
+    "cordova.plugins.diagnostic": "3.7.0",
+    "cordova-plugin-camera": "2.4.1",
+    "cordova-plugin-facebook": "0.2.2",
+    "cordova-plugin-document-viewer": "0.9.5",
+    "cordova-plugin-googleplus": "5.1.1",
+    "cordova-plugin-network-information": "1.3.3"
+  }
 }

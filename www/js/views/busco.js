@@ -201,6 +201,7 @@ document.addEventListener(
       success: function(httpResponse) {
         var data = httpResponse.data;
 
+        data = UtilFn.filtrarClave(params, data);
         // console.log('data publicacion -----------------------------------------');
         // console.log(JSON.stringify(data));
         // console.log('---------------------------------------------------------');
@@ -569,6 +570,13 @@ document.addEventListener(
           var centerTemp = mapRadio.getCenter();
           google.maps.event.trigger(mapRadio, 'resize');
           mapRadio.setCenter(centerTemp);
+          //Added Marker from Local position.
+          var marker = new google.maps.Marker({
+            position: { lat: centerTemp.lat(), lng: centerTemp.lng() },
+            map: mapRadio,
+            title: 'Mi Posición'
+          });
+          //----------------
         }, 500);
       }
 

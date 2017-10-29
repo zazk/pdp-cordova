@@ -1,38 +1,58 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "Pata de Perro would like to use your location",
+      "PACKAGE_NAME": "com.patadeperroapp.app"
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-geolocation": {
-            "GEOLOCATION_USAGE_DESCRIPTION": "Pata de Perro would like to use your location",
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-firebase": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova.plugins.diagnostic": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        }
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "es6-promise-plugin": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        }
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
+    },
+    "cordova-plugin-camera": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-facebook": {
+      "FACEBOOK_APP_ID": "1393050120751260",
+      "FACEBOOK_DISPLAY_NAME": "pataPerroTest",
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-googleplus": {
+      "REVERSED_CLIENT_ID": "504731767550-35a64kqlp6j3fm5i3imeemh5gci9h63b.apps.googleusercontent.com",
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.patadeperroapp.app"
+    }
+  }
 }

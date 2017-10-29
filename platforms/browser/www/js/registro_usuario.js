@@ -54,13 +54,11 @@ var firstItem = '<option value=""  selected>Seleccione el distrito</option>';
   me.registrar = function(){
 
     console.log(me.access_token);
-		/*
+
 		 if($("#dni").val()+""==""){
 			 UtilFn.showMessageToast("Ingrese su nro de documento.");
 			 $("#dni").focus();
-		 }else 
-		 */
-		 if($("#nombres").val()+""==""){
+		 }else if($("#nombres").val()+""==""){
 			 UtilFn.showMessageToast("Ingrese sus nombres.");
 			 $("#nombres").focus();
 		 }else if($("#email").val()+""==""){

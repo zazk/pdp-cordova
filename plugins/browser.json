@@ -1,37 +1,54 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     },
-    "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-geolocation": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-firebase": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova.plugins.diagnostic": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        }
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        },
-        "es6-promise-plugin": {
-            "PACKAGE_NAME": "com.patadeperroapp.app"
-        }
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-facebook": {
+      "FACEBOOK_APP_ID": "1393050120751260",
+      "FACEBOOK_DISPLAY_NAME": "pataPerroTest",
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-googleplus": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
+    }
+  }
 }
