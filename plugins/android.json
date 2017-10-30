@@ -41,6 +41,9 @@
     },
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     }
   },
   "dependent_plugins": {
@@ -49,6 +52,9 @@
     },
     "es6-promise-plugin": {
       "PACKAGE_NAME": "com.patadeperroapp.app"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     }
   }
 }

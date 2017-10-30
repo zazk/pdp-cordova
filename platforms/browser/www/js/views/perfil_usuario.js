@@ -218,10 +218,11 @@ document.addEventListener("backbutton", function() {
     perfilUsuario.actualizarPerfil = function() {
 
         var isValid = UtilFn.validateForm(
-            [{
+            [
+                /*{
                     id: 'dniPerfil',
                     messageErrorReq: 'Ingrese su Dni.'
-                },
+                }, */
                 {
                     id: 'nombresPerfil',
                     messageErrorReq: 'Ingrese su nombre completo.'

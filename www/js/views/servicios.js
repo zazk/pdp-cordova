@@ -69,7 +69,6 @@ document.addEventListener("backbutton", function() {
                       title: 'Mi Posiciòn'
                     });
                     //----------------
-
                     var input = document.getElementById('g-s-input');
                     searchBox = new google.maps.places.SearchBox(input);
                     map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
@@ -176,6 +175,7 @@ document.addEventListener("backbutton", function() {
                             if (item.ubicacionCatastro) {
                                 var cordenadas = new google.maps.LatLng(parseFloat(item.ubicacionCatastro.split(' ')[0]), parseFloat(item.ubicacionCatastro.split(' ')[1]));
                                 addMarker(cordenadas, item);
+
                             }
 
                         });

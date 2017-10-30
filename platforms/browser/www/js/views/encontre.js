@@ -578,6 +578,7 @@ document.addEventListener(
           var centerTemp = mapRadio.getCenter();
           google.maps.event.trigger(mapRadio, 'resize');
           mapRadio.setCenter(centerTemp);
+
           //Added Marker from Local position.
           var marker = new google.maps.Marker({
             position: { lat: centerTemp.lat(), lng: centerTemp.lng() },

@@ -43,12 +43,12 @@ var UtilFn = {
       options.redirect =
         options.redirect ||
         function() {
-          //localStorage.removeItem('usuario');
+          localStorage.removeItem('usuario');
           UtilFn.redirect((options.isRaiz ? '' : '../') + 'index');
         };
     } else {
       options.redirect = function() {
-        //localStorage.removeItem('usuario');
+        localStorage.removeItem('usuario');
         UtilFn.redirect((options.isRaiz ? '' : '../') + 'index');
       };
     }
@@ -518,16 +518,16 @@ var UtilFn = {
     var networkState = navigator.connection.type;
 
     var states = {};
-    states[navigator.connection.UNKNOWN] = 'Unknown connection';
-    states[navigator.connection.ETHERNET] = 'Ethernet connection';
-    states[navigator.connection.WIFI] = 'WiFi connection';
-    states[navigator.connection.CELL_2G] = 'Cell 2G connection';
-    states[navigator.connection.CELL_3G] = 'Cell 3G connection';
-    states[navigator.connection.CELL_4G] = 'Cell 4G connection';
-    states[navigator.connection.CELL] = 'Cell generic connection';
-    states[navigator.connection.NONE] = 'No network connection';
+    states[Connection.UNKNOWN] = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI] = 'WiFi connection';
+    states[Connection.CELL_2G] = 'Cell 2G connection';
+    states[Connection.CELL_3G] = 'Cell 3G connection';
+    states[Connection.CELL_4G] = 'Cell 4G connection';
+    states[Connection.CELL] = 'Cell generic connection';
+    states[Connection.NONE] = 'No network connection';
 
-    if (navigator.connection.NONE == networkState) {
+    if (Connection.NONE == networkState) {
       VERIFY_ENABLE_ACTIVE = true;
       UtilFn.modalInfoErrorGpsAndNetwork(
         'Error de Red',
@@ -699,6 +699,12 @@ var UtilFn = {
             (options.textEmpty ? options.textEmpty : 'Seleccione el distrito') +
             '</option>';
           $('#' + idDom).append(firstItem);
+          var allItem =
+            '<option  value="all" ' +
+            ' selected >' +
+            'Todos los distritos' +
+            '</option>';
+          $('#' + idDom).append(allItem);
           $.each(data, function(i, item) {
             $('#' + idDom).append(
               '<option ' +
@@ -747,22 +753,37 @@ var UtilFn = {
       //error invoke
       error: function() {}
     });
+  },
+  filtrarClave: function(params, data) {
+    if (params.mascotaClave) {
+      console.log(params.mascotaClave);
+      var clave = params.mascotaClave.toLowerCase();
+      var filtered = [];
+      for (var k = 0, t = data.length; k < t; k++) {
+        var item = data[k];
+        var descripcion = item.descripcion || '';
+        var nombre = item.nombre || '';
+        var distrito = item.desDistrito || '';
+        console.log(item.mascotaNombre);
+        console.log(item.descripcion);
+        console.log(item.desDistrito);
+        console.log(item.desRaza);
+        if (
+          nombre.toLowerCase().search(clave) >= 0 ||
+          descripcion.toLowerCase().search(clave) >= 0 ||
+          distrito.toLowerCase().search(clave) >= 0
+        ) {
+          filtered.push(item);
+        }
+      }
+      data = filtered;
+    }
+    return data;
   }
 };
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
-  window.FirebasePlugin.getToken(
-    function(token) {
-      // save this server-side and use it to push notifications to this device
-      console.log('TOOOOOOOKEN!!');
-      console.log(token);
-    },
-    function(error) {
-      console.error(error);
-    }
-  );
-
   UtilFn.checkEnabled();
   UtilFn.initCordenadas();
   //manejo de geo posicion actual
@@ -773,10 +794,4 @@ function onDeviceReady() {
   setInterval(function() {
     UtilFn.checkEnabled();
   }, 10 * 1000);
-}
-document.addEventListener('backbutton', onBackKeyDown, false);
-//Works Fine
-function onBackKeyDown() {
-  history.go(-1);
-  navigator.app.backHistory();
 }

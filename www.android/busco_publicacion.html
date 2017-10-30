@@ -1,0 +1,235 @@
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
+    <!--Import sweetalert.css-->
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <!--Css para maps-->
+    <link rel="stylesheet" type="text/css" href="css/maps-helpers.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+
+    <script>
+        if (!localStorage.getItem("usuario")) {
+            window.location = 'index.html';
+        }
+        window.BOTON_SELECTED = '1';
+    </script>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+
+
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/ns-default.css" />
+    <link rel="stylesheet" type="text/css" href="css/ns-style-attached.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+    <!--Import Estilos CSS-->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/forms.css" media="screen,projection" />
+
+
+</head>
+
+<body>
+
+    <!--Html include de loading-->
+    <div id="container_pre_loading"></div>
+    <!--Html include menu principal-->
+    <div id="container_menu_principal"></div>
+
+    <div id="container_menu_principal"></div>
+
+    <div class="nav-wrapper back-orange" id="navigator">
+        <div class="col s12" onclick="javascript: window.location = 'busco.html';">
+            <div class="breadcrumb"><img src="images/left.png"  class="botonAtrasimg btnBack" /> BUSCO</div>
+        </div>
+    </div>
+
+    <div id="main_body">
+        <div class="container-spacing-no-top">
+
+            <h5 class="subrayado-basico">Publicar</h5>
+
+            <div class="row" style="margin-top:25px;">
+                <div class="col s6">
+                    <div style="padding-left:35px;">¿Tu mascota esta registrada?</div>
+                </div>
+
+                <div class="col s6">
+                    <div class="switch">
+                        <label>
+                                No
+                                <input type="checkbox" checked = "checked" id="chkBuscoPublicacionMiMascota">
+                                <span class="lever"></span>
+                                Si
+                              </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12" id="content-nombre-o" style="display:none;">
+                    <i class="material-icons prefix">pets</i>
+                    <input name="mascota.nombre" id="nombresTxt" type="text" class="inputPublicacion">
+                    <label for="nombresTxt">Nombre <b class="red-text">(*)</b></label>
+                </div>
+
+
+                <div class="input-field col s12" class="row" id="content-nombre-p">
+                    <i class="material-icons prefix">pets</i>
+                    <select name="mascota.id" id="nombresCb" class="inputPublicacion"></select>
+                    <label for="nombresCb">Nombre <b class="red-text">(*)</b></label>
+                </div>
+
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">class</i>
+                    <select name="mascota.raza" id="razaMascota" class="inputPublicacion"></select>
+                    <label for="razaMascota" id="razaMascota_">Raza <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">pets</i>
+                    <select name="mascota.genero" id="generoMascota" class="inputPublicacion"></select>
+                    <label for="generoMascota" id="generoMascota_">Sexo <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">class</i>
+                    <select name="mascota.tamanio" id="tamanioMascota" class="inputPublicacion"></select>
+                    <label for="tamanioMascota" id="tamanioMascota_">Tamaño <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">class</i>
+                    <select name="mascota.color" id="colorMascota" class="inputPublicacion"></select>
+                    <label for="colorMascota" id="colorMascota_">Color <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">list</i>
+                    <select name="distrito" id="distritoCb" class="inputPublicacion"></select>
+                    <label>Distrito <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <input name="telefono" id="telefonoTxt" type="text" class="inputPublicacion">
+                    <label for="telefonoTxt" id="telefonoTxt_">Teléfono</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">description</i>
+                    <textarea name="mascota.desComentario" id="descripcionMascota" class="materialize-textarea inputPublicacion" data-length="15" maxlength="200"></textarea>
+                    <label for="descripcionMascota" id="descripcionMascota_">Descripción <b class="red-text">(*)</b></label>
+                </div>
+
+                <div class="col s6">
+                    <div style="padding-left:35px;">¿Se ofrece recompensa?</div>
+                </div>
+
+                <div class="col s6">
+                    <div class="switch" style="margin-top:12px;">
+                        <label>
+                                No
+                                <input type="checkbox" id="chkOfreceRecompensa">
+                                <span class="lever"></span>
+                                Si
+                              </label>
+                    </div>
+                </div>
+
+
+                <div class="input-field col s12" id="content-recompensa" style="display:none;">
+                    <i class="material-icons prefix">pets</i>
+                    <input name="montoRecompensa" id="montoRecompensa" type="text" class="inputPublicacion">
+                    <label for="montoRecompensa">Monto <b class="red-text">(*)</b></label>
+                </div>
+
+
+            </div>
+
+            <div class="input-field col s12">
+                <div class="nav-wrapper back-orange header-component-basico">
+                    <div class="col s12">
+                        <a href="#!" class="breadcrumb">FOTO</a>
+                        <!-- <i class="material-icons right white-text">add_a_photo</i> -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img id="imagenFotoPublica" src="images/default-image.png">
+                        <a id="btnClearFotoPublica" class="waves-effect waves-light btn btn-total-width grey lighten-3" style="color:#000;">Quitar Imagen</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-field col s12">
+                <div class="nav-wrapper back-orange header-component-basico">
+                    <div class="col s12">
+                        <a href="#!" class="breadcrumb">UBICACIÓN EN EL MAPA</a>
+                        <!-- <i class="material-icons right white-text">location_on</i> -->
+                    </div>
+                </div>
+                <div id="map-publica" class="card-panel contentMapaPanel"></div>
+                <input id="g-s-input" class="controls search-input-g" type="text" placeholder="Aproximar dirección">
+            </div>
+
+            <div>
+                <p><b class="red-text">(*)</b> Campos Obligatorios. </p>
+            </div>
+
+            <div class="row" style="margin-bottom:30px;">
+
+                <div class="input-field without-top with-bottom">
+                    <a id="btnPublica" class="waves-effect waves-light btn total-width">PUBLICAR</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div w3-include-html="views/generic/footer.html"></div>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+</body>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="js/Constantes.js"></script>
+<script type="text/javascript" src="materialize/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+<script src="js/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/util.js"></script>
+
+<script src="js/classie.js"></script>
+<script src="js/notificationFx.js"></script>
+
+<script>
+    window.SHOW_PRE_LOADING = true;
+    window.SLEEP_LOADING = 2000;
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqyFz0Q9ZZLMmgqJhck4soRfa0V1s71jQ&libraries=geometry,places" async defer></script>
+<script type="text/javascript" src="js/menu.js"></script>
+
+<!-- script -->
+<script type="text/javascript" src="js/views/busco_publicacion.js"></script>
+<!-- //script -->
+
+</html>

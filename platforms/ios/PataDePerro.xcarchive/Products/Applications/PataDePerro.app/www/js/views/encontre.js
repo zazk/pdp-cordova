@@ -195,6 +195,8 @@ document.addEventListener(
       success: function(httpResponse) {
         var data = httpResponse.data;
 
+        data = UtilFn.filtrarClave(params, data);
+
         if (data) {
           if (dataCatastroDistrito) {
             try {
@@ -207,13 +209,11 @@ document.addEventListener(
               encontreService.crearMapaRadio(data, distritoPosition, true);
             } catch (e) {
               if (UtilFn.getPosicionActual()) {
-                console.log('crearMapaRadio');
                 encontreService.crearMapaRadio(
                   data,
                   UtilFn.getPosicionActual()
                 );
               } else {
-                console.log('getCurrentPosition');
                 navigator.geolocation.getCurrentPosition(
                   function(position) {
                     encontreService.crearMapaRadio(data, position);
@@ -574,12 +574,7 @@ document.addEventListener(
 
       if (mapRadio) {
         setTimeout(function() {
-          console.log(
-            'rezise del mapa--ENCUENTRO',
-            mapRadio,
-            mapRadio.getCenter()
-          );
-
+          console.log('rezise del mapa');
           var centerTemp = mapRadio.getCenter();
           google.maps.event.trigger(mapRadio, 'resize');
           mapRadio.setCenter(centerTemp);
@@ -595,8 +590,8 @@ document.addEventListener(
       }
 
       dataEnradio = dataEnradio.sort(function(a, b) {
-        var a1 = b.fechaPerdida,
-          b1 = a.fechaPerdida;
+        var a1 = b.fechaEncontrado,
+          b1 = a.fechaEncontrado;
         if (a1 == b1) return 0;
         return a1 > b1 ? 1 : -1;
       });

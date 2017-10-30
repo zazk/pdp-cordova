@@ -699,6 +699,12 @@ var UtilFn = {
             (options.textEmpty ? options.textEmpty : 'Seleccione el distrito') +
             '</option>';
           $('#' + idDom).append(firstItem);
+          var allItem =
+            '<option  value="all" ' +
+            ' selected >' +
+            'Todos los distritos' +
+            '</option>';
+          $('#' + idDom).append(allItem);
           $.each(data, function(i, item) {
             $('#' + idDom).append(
               '<option ' +

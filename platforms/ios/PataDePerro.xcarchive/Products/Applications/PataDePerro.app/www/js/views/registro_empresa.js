@@ -337,7 +337,7 @@ document.addEventListener("backbutton", function() {
 
         params['usuario.id'] = UtilFn.getLoginUser().id;
         params['usuario.usuario'] = UtilFn.getLoginUser().usuario;
-        params['usuario.rol.id'] = UtilFn.getLoginUser().rol.id;
+        params['usuario.rol.id'] = 2;
 
 
         console.log('Empresa payload-----------------------------------------');

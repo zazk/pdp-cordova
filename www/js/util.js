@@ -699,14 +699,12 @@ var UtilFn = {
             (options.textEmpty ? options.textEmpty : 'Seleccione el distrito') +
             '</option>';
           $('#' + idDom).append(firstItem);
-
           var allItem =
-            '<option  value="" ' +
+            '<option  value="all" ' +
             ' selected >' +
             'Todos los distritos' +
             '</option>';
           $('#' + idDom).append(allItem);
-
           $.each(data, function(i, item) {
             $('#' + idDom).append(
               '<option ' +
@@ -796,15 +794,4 @@ function onDeviceReady() {
   setInterval(function() {
     UtilFn.checkEnabled();
   }, 10 * 1000);
-
-
-  document.addEventListener("backbutton", function(e){
-     if(window.location.pathname == 'main.html'){
-         e.preventDefault();
-         navigator.app.exitApp();
-     }
-     else {
-         navigator.app.backHistory()
-     }
-  }, false);
 }
