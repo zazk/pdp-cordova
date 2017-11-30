@@ -386,6 +386,14 @@ module.exports = [
         "clobbers": [
             "navigator.device.capture"
         ]
+    },
+    {
+        "id": "onesignal-cordova-plugin.OneSignal",
+        "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+        "pluginId": "onesignal-cordova-plugin",
+        "clobbers": [
+            "OneSignal"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -405,7 +413,8 @@ module.exports.metadata =
     "cordova-plugin-googleplus": "5.1.1",
     "cordova-plugin-network-information": "1.3.3",
     "cordova-plugin-file": "4.3.3",
-    "cordova-plugin-media-capture": "1.4.3"
+    "cordova-plugin-media-capture": "1.4.3",
+    "onesignal-cordova-plugin": "2.2.4"
 };
 // BOTTOM OF METADATA
 });

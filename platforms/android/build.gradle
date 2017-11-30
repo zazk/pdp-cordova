@@ -89,6 +89,7 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "cordova-plugin-firebase/app-build.gradle"
+apply from: "onesignal-cordova-plugin/patadeperro-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -262,6 +263,7 @@ dependencies {
     compile "com.android.support:support-v4:+"
     compile "com.google.android.gms:play-services-auth:+"
     compile "com.google.android.gms:play-services-identity:+"
+    compile "com.onesignal:OneSignal:3.6.5"
     // SUB-PROJECT DEPENDENCIES END
 }
 

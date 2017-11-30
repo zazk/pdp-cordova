@@ -17,7 +17,7 @@
     "CoreText.framework": 1,
     "SafariServices.framework": 1,
     "Security.framework": 1,
-    "SystemConfiguration.framework": 2,
+    "SystemConfiguration.framework": 3,
     "libz.tbd": 1,
     "libz.dylib": 1,
     "CoreTelephony.framework": 1

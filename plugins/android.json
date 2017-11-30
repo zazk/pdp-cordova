@@ -44,6 +44,9 @@
     },
     "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "pe.com.patadeperro"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "pe.com.patadeperro"
     }
   },
   "dependent_plugins": {
